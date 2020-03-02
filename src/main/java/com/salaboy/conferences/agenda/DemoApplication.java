@@ -29,12 +29,12 @@ public class DemoApplication {
 
     private ObjectMapper objectMapper = new ObjectMapper();
     private Set<AgendaItem> agendaItems = new TreeSet<>(
-//            new Comparator<AgendaItem>() {
-//        @Override
-//        public int compare(AgendaItem t, AgendaItem t1) {
-//            return t.getTime().compareTo(t1.getTime());
-//        }
-//    }
+            new Comparator<AgendaItem>() {
+                @Override
+                public int compare(AgendaItem t, AgendaItem t1) {
+                    return t.getId().compareTo(t1.getId());
+                }
+            }
     );
 
 
