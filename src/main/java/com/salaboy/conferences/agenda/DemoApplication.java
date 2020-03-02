@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @SpringBootApplication
 @RestController
@@ -30,7 +31,7 @@ public class DemoApplication {
     private Set<AgendaItem> agendaItems = new TreeSet<>(new Comparator<AgendaItem>() {
         @Override
         public int compare(AgendaItem t, AgendaItem t1) {
-            return t.getTalkTime().compareTo(t1.getTalkTime());
+            return t.getTime().compareTo(t1.getTime());
         }
     });
 
@@ -50,6 +51,11 @@ public class DemoApplication {
     @GetMapping()
     public Set<AgendaItem> getAll() {
         return agendaItems;
+    }
+
+    @GetMapping("/{day}")
+    public Set<AgendaItem> getAllByDay(@PathVariable(value = "day", required = true) String day) {
+        return agendaItems.stream().filter(a -> a.getDay().equals(day)).collect(Collectors.toSet());
     }
 
     @GetMapping("/{id}")

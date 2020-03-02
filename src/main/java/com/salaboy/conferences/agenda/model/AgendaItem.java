@@ -9,17 +9,19 @@ public class AgendaItem {
     private String id;
     private String title;
     private String author;
-    private Date talkTime;
+    private String day;
+    private String time;
 
 
     public AgendaItem() {
         this.id = UUID.randomUUID().toString();
     }
 
-    public AgendaItem(String title, String author, Date talkTime) {
+    public AgendaItem(String title, String author, String day, String time) {
         this.title = title;
         this.author = author;
-        this.talkTime = talkTime;
+        this.day = day;
+        this.time = time;
     }
 
     public String getId() {
@@ -47,29 +49,19 @@ public class AgendaItem {
         this.author = author;
     }
 
-    public Date getTalkTime() {
-        return talkTime;
+    public String getDay() {
+        return day;
     }
 
-    public void setTalkTime(Date talkTime) {
-        this.talkTime = talkTime;
+    public void setDay(String day) {
+        this.day = day;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AgendaItem agendaItem = (AgendaItem) o;
-        return Objects.equals(id, agendaItem.id);
+    public String getTime() {
+        return time;
     }
 
-    @Override
-    public String toString() {
-        return "AgendaItem{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", talkTime=" + talkTime +
-                '}';
+    public void setTime(String time) {
+        this.time = time;
     }
 }
