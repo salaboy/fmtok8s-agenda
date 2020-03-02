@@ -58,7 +58,7 @@ public class DemoApplication {
         return agendaItems.stream().filter(a -> a.getDay().equals(day)).collect(Collectors.toSet());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/day/{id}")
     public Optional<AgendaItem> getById(@PathVariable("id") String id) {
         return agendaItems.stream().filter(p -> p.getId().equals(id)).findFirst();
     }
