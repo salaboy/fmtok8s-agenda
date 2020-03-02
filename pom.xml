@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.salaboy.conferences</groupId>
     <artifactId>fmtok8s-agenda</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.6</version>
     <name>From Monolith to K8S ::  Agenda Service</name>
     <description>From Monolith to K8S ::  Agenda Service</description>
 
