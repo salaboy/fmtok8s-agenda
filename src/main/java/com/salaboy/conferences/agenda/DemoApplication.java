@@ -40,7 +40,7 @@ public class DemoApplication {
 
     @GetMapping("/info")
     public String infoWithVersion() {
-        return "Agenda v" + version;
+        return "{ \"name\" : \"Agenda Service\", \"version\" : \"" + version + "\" }";
     }
 
     @PostMapping()
@@ -55,12 +55,12 @@ public class DemoApplication {
         return agendaItems;
     }
 
-    @GetMapping("/{day}")
+    @GetMapping("/day/{day}")
     public Set<AgendaItem> getAllByDay(@PathVariable(value = "day", required = true) String day) {
         return agendaItems.stream().filter(a -> a.getDay().equals(day)).collect(Collectors.toSet());
     }
 
-    @GetMapping("/day/{id}")
+    @GetMapping("/{id}")
     public Optional<AgendaItem> getById(@PathVariable("id") String id) {
         return agendaItems.stream().filter(p -> p.getId().equals(id)).findFirst();
     }
