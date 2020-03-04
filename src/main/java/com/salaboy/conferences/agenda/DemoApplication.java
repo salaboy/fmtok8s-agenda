@@ -3,10 +3,10 @@ package com.salaboy.conferences.agenda;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.salaboy.conferences.agenda.model.AgendaItem;
 import com.salaboy.conferences.agenda.model.Proposal;
-//import io.zeebe.client.api.response.ActivatedJob;
-//import io.zeebe.client.api.worker.JobClient;
-//import io.zeebe.spring.client.EnableZeebeClient;
-//import io.zeebe.spring.client.annotation.ZeebeWorker;
+import io.zeebe.client.api.response.ActivatedJob;
+import io.zeebe.client.api.worker.JobClient;
+import io.zeebe.spring.client.EnableZeebeClient;
+import io.zeebe.spring.client.annotation.ZeebeWorker;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @SpringBootApplication
 @RestController
-//@EnableZeebeClient
+@EnableZeebeClient
 public class DemoApplication {
 
     public static void main(String[] args) {
@@ -65,12 +65,17 @@ public class DemoApplication {
         return agendaItems.stream().filter(p -> p.getId().equals(id)).findFirst();
     }
 
-//    @ZeebeWorker(name = "agenda-worker", type = "agenda-publish")
-//    public void newAgendaItemJob(final JobClient client, final ActivatedJob job) {
-//        Proposal proposal = objectMapper.convertValue(job.getVariablesAsMap().get("proposal"), Proposal.class);
-//        newAgendaItem(new AgendaItem(proposal.getTitle(), proposal.getAuthor(), new Date()));
-//        client.newCompleteCommand(job.getKey()).send();
-//    }
+    @ZeebeWorker(name = "agenda-worker", type = "agenda-publish")
+    public void newAgendaItemJob(final JobClient client, final ActivatedJob job) {
+        Proposal proposal = objectMapper.convertValue(job.getVariablesAsMap().get("proposal"), Proposal.class);
+        String[] days = {"Monday", "Tuesday"};
+        String[] times = {"9:00 am", "10:00 am", "11:00 am", "1:00 pm", "2:00 pm", "3:00 pm", "4:00 pm", "5:00 pm"};
+        Random random = new Random();
+        int day = random.nextInt(2);
+        int time = random.nextInt(8);
+        newAgendaItem(new AgendaItem(proposal.getTitle(), proposal.getAuthor(), days[day], times[time]));
+        client.newCompleteCommand(job.getKey()).send();
+    }
 
 
 }

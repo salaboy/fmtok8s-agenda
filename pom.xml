@@ -11,8 +11,8 @@
     <groupId>com.salaboy.conferences</groupId>
     <artifactId>fmtok8s-agenda</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>From Monolith to K8S ::  Agenda Service</name>
-    <description>From Monolith to K8S ::  Agenda Service</description>
+    <name>From Monolith to K8S :: Agenda Service</name>
+    <description>From Monolith to K8S :: Agenda Service</description>
 
     <properties>
         <java.version>11</java.version>
@@ -32,12 +32,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
-        		<!-- <dependency>
-        			<groupId>io.zeebe.spring</groupId>
-        			<artifactId>spring-zeebe-starter</artifactId>
-        			<version>${zeebe.version}</version>
-        		</dependency> -->
-
+        <dependency>
+            <groupId>io.zeebe.spring</groupId>
+            <artifactId>spring-zeebe-starter</artifactId>
+            <version>${zeebe.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
