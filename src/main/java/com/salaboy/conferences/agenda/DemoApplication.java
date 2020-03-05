@@ -32,7 +32,10 @@ public class DemoApplication {
             new Comparator<AgendaItem>() {
                 @Override
                 public int compare(AgendaItem t, AgendaItem t1) {
-                    return t.getId().compareTo(t1.getId());
+                    if (t != null && t1 != null) {
+                        return t.getTime().compareTo(t1.getTime());
+                    }
+                    return 0;
                 }
             }
     );
