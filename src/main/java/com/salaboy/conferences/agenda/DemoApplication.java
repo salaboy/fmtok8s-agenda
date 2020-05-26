@@ -7,6 +7,7 @@ import io.zeebe.client.api.response.ActivatedJob;
 import io.zeebe.client.api.worker.JobClient;
 import io.zeebe.spring.client.EnableZeebeClient;
 import io.zeebe.spring.client.annotation.ZeebeWorker;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 @SpringBootApplication
 @RestController
 @EnableZeebeClient
+@Slf4j
 public class DemoApplication {
 
     public static void main(String[] args) {
@@ -48,7 +50,7 @@ public class DemoApplication {
 
     @PostMapping()
     public String newAgendaItem(@RequestBody AgendaItem agendaItem) {
-        System.out.println("> New Agenda Received: " + agendaItem);
+        log.info("> New Agenda Item Received: " + agendaItem);
         agendaItems.add(agendaItem);
         return "Agenda Item Added to Agenda";
     }
