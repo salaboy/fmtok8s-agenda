@@ -1,31 +1,31 @@
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mtckb[0m
-{"level":"warn","ts":1583021271.2285142,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583021271.2290812,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-zgx74[0m
+{"level":"info","ts":1590489090.0893388,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590489090.0899892,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xvlrh[0m
-{"level":"warn","ts":1583021272.2059116,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1583021272.2095068,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-5zltk[0m
+{"level":"info","ts":1590489090.5971706,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590489090.5984182,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-agenda-master-r-8sk7k-r6wmm[0m
-{"level":"warn","ts":1583021279.2090695,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583021280.3059714,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/fmtok8s-agenda.git @ v0.0.3 in path /workspace/source"}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-agenda-master-r-b2r9c-pvbc8[0m
+{"level":"info","ts":1590489096.5887215,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590489097.716957,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/fmtok8s-agenda.git @ v0.0.16 in path /workspace/source"}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:97c792d62022e34327c45ca06c92ea5aeb2fce2a
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:87f4561293873e9c9f6fa2b369b847da15e70b1e
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
 Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] ---------------< com.*******.conferences:fmtok8s-agenda >---------------
-[INFO] Building From Monolith to K8S ::  Agenda Service 0.0.3
+[INFO] Building From Monolith to K8S :: Agenda Service 0.0.16
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ fmtok8s-agenda ---
@@ -52,38 +52,38 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /workspace/source/target/surefire-reports/2020-03-01T00-08-29_539-jvmRun1.dumpstream
-00:08:35.750 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.*******.conferences.agenda.DemoApplicationTests]
-00:08:35.799 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-00:08:35.800 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-00:08:35.801 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.*******.conferences.agenda.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-00:08:35.801 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.*******.conferences.agenda.DemoApplicationTests], using SpringBootContextLoader
-00:08:35.802 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.DemoApplicationTests]: class path resource [com/*******/conferences/agenda/DemoApplicationTests-context.xml] does not exist
-00:08:35.803 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.DemoApplicationTests]: class path resource [com/*******/conferences/agenda/DemoApplicationTestsContext.groovy] does not exist
-00:08:35.803 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.*******.conferences.agenda.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-00:08:35.803 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.*******.conferences.agenda.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-00:08:35.805 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:35.806 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.*******.conferences.agenda.DemoApplication for test class com.*******.conferences.agenda.DemoApplicationTests
-00:08:35.810 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.*******.conferences.agenda.DemoApplicationTests]: using defaults.
-00:08:35.811 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-00:08:35.812 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
-00:08:35.812 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
-00:08:35.813 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-00:08:35.813 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3da05287, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e636ea3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@115667d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@736caf7a, org.springframework.test.context.event.EventPublishingTestExecutionListener@4ce7fffa, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@497486b3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@63f8276e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@75f95314, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6127a7e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6bbe2511]
-00:08:35.813 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:35.814 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:36.201 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:36.202 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
+[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /workspace/source/target/surefire-reports/2020-05-26T10-32-13_105-jvmRun1.dumpstream
+10:32:17.556 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.*******.conferences.agenda.DemoApplicationTests]
+10:32:17.587 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+10:32:17.593 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+10:32:17.597 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.*******.conferences.agenda.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+10:32:17.606 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.*******.conferences.agenda.DemoApplicationTests], using SpringBootContextLoader
+10:32:17.610 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.DemoApplicationTests]: class path resource [com/*******/conferences/agenda/DemoApplicationTests-context.xml] does not exist
+10:32:17.613 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.DemoApplicationTests]: class path resource [com/*******/conferences/agenda/DemoApplicationTestsContext.groovy] does not exist
+10:32:17.615 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.*******.conferences.agenda.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:32:17.618 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.*******.conferences.agenda.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:32:17.632 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:17.634 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.*******.conferences.agenda.DemoApplication for test class com.*******.conferences.agenda.DemoApplicationTests
+10:32:17.641 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.*******.conferences.agenda.DemoApplicationTests]: using defaults.
+10:32:17.645 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+10:32:17.660 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+10:32:17.690 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+10:32:17.697 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+10:32:17.704 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@767e20cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3a3e78f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@301ec38b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@17a1e4ca, org.springframework.test.context.event.EventPublishingTestExecutionListener@10ded6a9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@c5dc4a2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4a194c39, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@52066604, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@340b9973, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@56113384]
+10:32:17.706 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:17.709 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:17.928 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:17.943 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
 [INFO] Running com.*******.conferences.agenda.DemoApplicationTests
-00:08:36.216 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:36.217 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:36.219 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:36.224 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:36.231 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2b5f4d54 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@5f7b97da testClass = DemoApplicationTests, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@69e153c5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74ea2410, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4be29ed9, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@17f9d882, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4681c175], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
-00:08:36.238 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:36.240 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-00:08:36.256 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@2b5f4d54 testClass = DemoApplicationTests, testInstance = com.*******.conferences.agenda.DemoApplicationTests@47a5b70d, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@5f7b97da testClass = DemoApplicationTests, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@69e153c5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74ea2410, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4be29ed9, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@17f9d882, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4681c175], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
-00:08:36.344 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+10:32:17.994 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:17.999 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:18.007 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:18.007 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:18.018 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@72ea6193 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@31aa3ca5 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3e08ff24, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@24569dba, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@548a24a, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@4c163e3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5745ca0e], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+10:32:18.032 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:18.040 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
+10:32:18.047 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@72ea6193 testClass = DemoApplicationTests, testInstance = com.*******.conferences.agenda.DemoApplicationTests@5a7005d, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@31aa3ca5 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3e08ff24, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@24569dba, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@548a24a, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@4c163e3, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5745ca0e], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+10:32:18.137 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -91,13 +91,549 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.2.0.RELEASE)
+ :: Spring Boot ::        (v2.2.6.RELEASE)
 
-2020-03-01 00:08:37.245  INFO 72 --- [           main] c.s.c.agenda.DemoApplicationTests        : Starting DemoApplicationTests on *******-fmtok8s-agenda-master-r-8sk7k-3-from-build-pack-x2sdk-p with PID 72 (started by root in /workspace/source)
-2020-03-01 00:08:37.248  INFO 72 --- [           main] c.s.c.agenda.DemoApplicationTests        : No active profile set, falling back to default profiles: default
-2020-03-01 00:08:44.732  INFO 72 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-03-01 00:08:46.811  INFO 72 --- [           main] c.s.c.agenda.DemoApplicationTests        : Started DemoApplicationTests in 10.404 seconds (JVM running for 16.164)
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.625 s - in com.*******.conferences.agenda.DemoApplicationTests
+2020-05-26 10:32:18.912  INFO 72 --- [           main] c.s.c.agenda.DemoApplicationTests        : Starting DemoApplicationTests on *******-fmtok8s-agenda-master-r-b2r9c-3-from-build-pack-m**td-p with PID 72 (started by root in /workspace/source)
+2020-05-26 10:32:18.922  INFO 72 --- [           main] c.s.c.agenda.DemoApplicationTests        : No active profile set, falling back to default profiles: default
+2020-05-26 10:32:22.630  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.processor.PostProcessorConfiguration' of type [io.zeebe.spring.client.config.processor.PostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:22.652  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration' of type [io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:22.689  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeExpressionResolver' of type [io.zeebe.spring.util.ZeebeExpressionResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:22.758  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeDeploymentValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeDeploymentValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:22.787  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deploymentPostProcessor' of type [io.zeebe.spring.client.config.processor.DeploymentPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:22.804  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeWorkerValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeWorkerValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:22.830  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeWorkerPostProcessor' of type [io.zeebe.spring.client.config.processor.ZeebeWorkerPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:23.008  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebe.client-io.zeebe.spring.client.properties.ZeebeClientConfigurationProperties' of type [io.zeebe.spring.client.properties.ZeebeClientConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:23.017  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration' of type [io.zeebe.spring.client.config.ZeebeClientStarterAutoConfiguration$$EnhancerBySpringCGLIB$$4bf3f214] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:23.087  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'builder' of type [io.zeebe.client.impl.ZeebeClientBuilderImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:23.088  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.ZeebeClientSpringConfiguration' of type [io.zeebe.spring.client.config.ZeebeClientSpringConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:23.098  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeClientObjectFactory' of type [io.zeebe.spring.client.config.ZeebeClientSpringConfiguration$$Lambda$452/0x0000000100397840] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:23.130  INFO 72 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeClientLifecycle' of type [io.zeebe.spring.client.ZeebeClientLifecycle] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-26 10:32:23.936  INFO 72 --- [           main] i.z.s.c.c.p.ZeebeWorkerPostProcessor     : zeebeWorker: ClassInfo(bean=com.*******.conferences.agenda.DemoApplication$$EnhancerBySpringCGLIB$$d0c154d9@13dbed9e, beanName=demoApplication)
+2020-05-26 10:32:30.634  INFO 72 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-05-26 10:32:33.188  INFO 72 --- [           main] i.z.s.c.c.p.ZeebeWorkerPostProcessor     : register job worker: ZeebeWorkerValue(type=agenda-publish, name=agenda-worker, timeout=-1, maxJobsActive=-1, beanInfo=MethodInfo(classInfo=ClassInfo(bean=com.*******.conferences.agenda.DemoApplication$$EnhancerBySpringCGLIB$$d0c154d9@13dbed9e, beanName=demoApplication), method=public void com.*******.conferences.agenda.DemoApplication.newAgendaItemJob(io.zeebe.client.api.worker.JobClient,io.zeebe.client.api.response.ActivatedJob)))
+2020-05-26 10:32:33.250  INFO 72 --- [           main] c.s.c.agenda.DemoApplicationTests        : Started DemoApplicationTests in 15.055 seconds (JVM running for 19.155)
+2020-05-26 10:32:33.448  WARN 72 --- [ault-executor-0] io.grpc.internal.ManagedChannelImpl      : [Channel<1>: (**-zeebe:26500)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host **-zeebe, cause=java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436)
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646)
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404)
+	... 5 more
+}
+2020-05-26 10:32:33.499  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:33.541  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:33.641  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:33.741  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:33.843  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:33.987  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:34.087  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:34.187  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:34.288  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:34.389  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:34.425  WARN 72 --- [ault-executor-0] io.grpc.internal.ManagedChannelImpl      : [Channel<1>: (**-zeebe:26500)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host **-zeebe, cause=java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436)
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.UnknownHostException: **-zeebe
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646)
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404)
+	... 5 more
+}
+2020-05-26 10:32:34.488  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:34.592  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:34.692  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.759 s - in com.*******.conferences.agenda.DemoApplicationTests
+2020-05-26 10:32:34.793  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+2020-05-26 10:32:34.896  WARN 72 --- [ault-executor-0] io.zeebe.client.job.poller               : Failed to activated jobs for worker agenda-worker and job type agenda-publish
+
+io.grpc.StatusRuntimeException: UNAVAILABLE: Unable to resolve host **-zeebe
+	at io.grpc.Status.asRuntimeException(Status.java:533) ~[grpc-api-1.28.1.jar:1.28.1]
+	at io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:449) ~[grpc-stub-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:426) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl.access$500(ClientCallImpl.java:66) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:689) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$900(ClientCallImpl.java:577) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:751) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:740) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[grpc-core-1.28.1.jar:1.28.1]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException: **-zeebe
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:436) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.resolveInternal(DnsNameResolver.java:272) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:228) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 3 common frames omitted
+Caused by: java.net.UnknownHostException: **-zeebe
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298) ~[na:na]
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:646) ~[grpc-core-1.28.1.jar:1.28.1]
+	at io.grpc.internal.DnsNameResolver.resolveAll(DnsNameResolver.java:404) ~[grpc-core-1.28.1.jar:1.28.1]
+	... 5 common frames omitted
+
+[WARNING] ForkStarter IOException: org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+ using SpringBootContextLoader
+ Context.groovy}.
+ non-private, non-final, nested classes annotated with @Configuration.
+ org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@487db668, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@46944ca9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@22bac7bc, org.springframework.test.context.event.EventPublishingTestExecutionListener@63798ca7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4612b856, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@22875539, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5674e1f2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@79c7532f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2a448449]. See the dump file /workspace/source/target/surefire-reports/2020-05-26T10-32-13_105-jvmRun1.dumpstream
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -105,113 +641,115 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] 
 [INFO] 
 [INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ fmtok8s-agenda ---
-[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.3.jar
+[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.16.jar
 [INFO] 
-[INFO] --- spring-boot-maven-plugin:2.2.0.RELEASE:repackage (repackage) @ fmtok8s-agenda ---
+[INFO] --- spring-boot-maven-plugin:2.2.6.RELEASE:repackage (repackage) @ fmtok8s-agenda ---
 [INFO] Replacing main artifact with repackaged archive
 [INFO] 
 [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ fmtok8s-agenda ---
-[INFO] Installing /workspace/source/target/fmtok8s-agenda-0.0.3.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.3/fmtok8s-agenda-0.0.3.jar
-[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.3/fmtok8s-agenda-0.0.3.pom
+[INFO] Installing /workspace/source/target/fmtok8s-agenda-0.0.16.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.16/fmtok8s-agenda-0.0.16.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.16/fmtok8s-agenda-0.0.16.pom
 [INFO] 
 [INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ fmtok8s-agenda ---
 [INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  49.114 s
-[INFO] Finished at: 2020-03-01T00:08:55Z
+[INFO] Total time:  58.155 s
+[INFO] Finished at: 2020-05-26T10:32:41Z
 [INFO] ------------------------------------------------------------------------
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
 v1.0.1
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
-[36mINFO[0m[0000] Downloading base image openjdk:11-jre-slim   
-ERROR: logging before flag.Parse: E0301 00:08:56.536086      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E0301 00:08:56.541968      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-2020/03/01 00:08:56 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:88d4192a5dab8de64fbeec699bcea3739f097f78f3184cd4e2aea6d7ac238da7: no such file or directory 
-[36mINFO[0m[0001] Downloading base image openjdk:11-jre-slim   
-2020/03/01 00:08:57 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0002] cmd: EXPOSE                                  
-[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
-[36mINFO[0m[0002] Using files from context: [/workspace/source/target/fmtok8s-agenda-0.0.3.jar] 
-[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
-[36mINFO[0m[0002] Taking snapshot of full filesystem...        
-[36mINFO[0m[0002] ENV PORT 8080                                
-[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0002] ENV CLASSPATH /opt/lib                       
-[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0002] EXPOSE 8080                                  
-[36mINFO[0m[0002] cmd: EXPOSE                                  
-[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
-[36mINFO[0m[0002] COPY pom.xml target/lib* /opt/lib/           
-[36mINFO[0m[0002] Taking snapshot of files...                  
-[36mINFO[0m[0002] Using files from context: [/workspace/source/target/fmtok8s-agenda-0.0.3.jar] 
-[36mINFO[0m[0002] COPY target/*.jar /opt/app.jar               
-[36mINFO[0m[0002] Taking snapshot of files...                  
-[36mINFO[0m[0002] WORKDIR /opt                                 
-[36mINFO[0m[0002] cmd: workdir                                 
-[36mINFO[0m[0002] Changed working directory to /opt            
-[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0002] ENTRYPOINT exec java $JAVA_OPTS -jar app.jar 
-[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
-2020/03/01 00:08:59 existing blob: sha256:68ced04f60ab5c7a5f1d0b0b4e7572c5a4c8cce44866513d30d9df1a15277d6b
-2020/03/01 00:08:59 existing blob: sha256:d5c28bc4eb5532356cd06f142ed9cd6cee0811be74e992fdd2190fee8cbcf710
-2020/03/01 00:08:59 existing blob: sha256:8afa8e973e226cdc57cde0ef199d85ee1aa93b5f6a04abf68dc4952cdab931d5
-2020/03/01 00:08:59 existing blob: sha256:4874c5772968dcab87c114bee2baf2c7e9a06dda36e63bdfeab71bd4d6f02890
-2020/03/01 00:09:02 pushed blob: sha256:792ec5f06600f93be8eba54b2f58d60b12d0c34b62dd5ea3a1c8f7de5cb25a3d
-2020/03/01 00:09:03 pushed blob: sha256:12c644a04ca33829dacbf4acec6c3b8de51644f10b0d2ad0971baf2ab29b9386
-2020/03/01 00:09:04 pushed blob: sha256:7930f91b901ce7d3250441d8de07a76158aa2ae4fa50863f4c5a492a947f482e
-2020/03/01 00:09:06 gcr.io/camunda-consulting-de/fmtok8s-agenda:0.0.3: digest: sha256:ea6e9fd590b8d5597f5fc743e5332479fe7c7b0aed0bf62096bee5ed91bf4d15 size: 1243
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0526 10:32:44.361399      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest openjdk:11-jre-slim 
+E0526 10:32:44.771986      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0526 10:32:44.775868      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0004] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0004] Checking for cached layer gcr.io/camunda-researchanddevelopment/cache:83d079ce92c375129abf871d85c563ced3e679ec3a077e88690982be8c2abf8a... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
+[36mINFO[0m[0005] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
+[36mINFO[0m[0010] ENV PORT 8080                                
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] EXPOSE 8080                                  
+[36mINFO[0m[0010] cmd: EXPOSE                                  
+[36mINFO[0m[0010] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0010] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0010] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0010] Resolving 1 paths                            
+[36mINFO[0m[0010] Taking snapshot of files...                  
+[36mINFO[0m[0010] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0010] Pushing layer gcr.io/camunda-researchanddevelopment/cache:83d079ce92c375129abf871d85c563ced3e679ec3a077e88690982be8c2abf8a to cache now 
+[36mINFO[0m[0010] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0010] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0010] Resolving 1 paths                            
+[36mINFO[0m[0010] Taking snapshot of files...                  
+[36mINFO[0m[0012] Pushing layer gcr.io/camunda-researchanddevelopment/cache:9f9ec39ede0c952acac2c395e00e3b36ee542d7b4e5caacc603e804e6d427f20 to cache now 
+[36mINFO[0m[0012] WORKDIR /opt                                 
+[36mINFO[0m[0012] cmd: workdir                                 
+[36mINFO[0m[0012] Changed working directory to /opt            
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] ENTRYPOINT exec java $JAVA_OPTS -jar app.jar 
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/fmtok8s-agenda to an unshallow repository
-Generating change log from git ref 1619c0c943eabdd225fb3d0d42b8cefe87b01d0f => e83c036b60fb915b5330724cfa51f1e93ed9f6f3
-WARNING: Failed to enrich commit 97c792d62022e34327c45ca06c92ea5aeb2fce2a with issues: selected more than one user from users.jenkins.io: [******* x-0]
-WARNING: Failed to enrich commit 97c792d62022e34327c45ca06c92ea5aeb2fce2a with issues: selected more than one user from users.jenkins.io: [******* x-0]
+Generating change log from git ref 9b9eb1ef60cb2ee5779c30ecf0070829ca1dc72d => 35ecda138fb167e7fddf19dea030b6669cddc28b
+Associating user x-0 in users.jenkins.io with email *******@gmail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 87f4561293873e9c9f6fa2b369b847da15e70b1e with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email *******@gmail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 87f4561293873e9c9f6fa2b369b847da15e70b1e with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
 Finding issues in commit messages using git format
-WARNING: No release found for *******/fmtok8s-agenda and tag v0.0.3 so creating a new release
-Updated the release information at https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.3
+WARNING: No release found for *******/fmtok8s-agenda and tag v0.0.16 so creating a new release
+Updated the release information at https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.16
 generated: /workspace/source/charts/fmtok8s-agenda/templates/release.yaml
-Created Release fmtok8s-agenda-0-0-3 resource in namespace **
-Updating PipelineActivity *******-fmtok8s-agenda-master-3 with version 0.0.3
-Updated PipelineActivities *******-fmtok8s-agenda-master-3 with release notes URL: https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.3
+Created Release fmtok8s-agenda-0-0-16 resource in namespace **
+Updating PipelineActivity *******-fmtok8s-agenda-master-3 with version 0.0.16
+Updated PipelineActivities *******-fmtok8s-agenda-master-3 with release notes URL: https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.16
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file fmtok8s-agenda-0.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file fmtok8s-agenda-0.0.16.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-8sk7k-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Promoting app fmtok8s-agenda version 0.0.3 to namespace **-staging
-WARNING: 
-Created Pull Request: https://github.com/*******/environment-kubecon-prep-staging/pull/47
-Added label updatebot to Pull Request https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/47
-Pull Request https://github.com/*******/environment-kubecon-prep-staging/pull/47 is merged at sha 8befefc651bfd9bd92fe8bd44832132ae2b675c2
+Promoting app fmtok8s-agenda version 0.0.16 to namespace **-staging
+Created Pull Request: https://github.com/*******/environment-jnation-tests-staging/pull/14
+Added label updatebot to Pull Request https://github.com/*******/environment-jnation-tests-staging/pull/14
+got git provider status pending from PR https://github.com/*******/environment-jnation-tests-staging/pull/14
+got git provider status pending from PR https://github.com/*******/environment-jnation-tests-staging/pull/14
+Pull Request https://github.com/*******/environment-jnation-tests-staging/pull/14 is merged at sha 0301c9d5cafdc5f8f96586c16cf4566c196de91a
 Pull Request merged but we are not waiting for the update pipeline to complete!
+
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-b2r9c-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-step10[0m
+Using https://github.com/*******/fmtok8s-agenda as source for change discovered from git repo in /workspace/source
+Updated Pull Request: https://github.com/*******/fmtok8s-kubecon-app/pull/15
+Added label updatebot to Pull Request https://github.com/*******/fmtok8s-kubecon-app/pull/15
