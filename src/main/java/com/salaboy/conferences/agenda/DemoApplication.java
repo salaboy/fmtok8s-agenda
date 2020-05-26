@@ -44,7 +44,9 @@ public class DemoApplication {
 
 
     @GetMapping("/info")
-    return "{ \"name\" : \"Agenda Service\", \"version\" : \"" + version + "\", \"source\": \"https://github.com/salaboy/fmtok8s-agenda/releases/tag/v"+version+"\"\" }";
+    public String getInfo() {
+        return "{ \"name\" : \"Agenda Service\", \"version\" : \"" + version + "\", \"source\": \"https://github.com/salaboy/fmtok8s-agenda/releases/tag/v" + version + "\"\" }";
+    }
 
     @PostMapping()
     public String newAgendaItem(@RequestBody AgendaItem agendaItem) {
