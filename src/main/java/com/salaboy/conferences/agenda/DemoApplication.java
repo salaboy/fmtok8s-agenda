@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -68,6 +69,11 @@ public class DemoApplication {
     @GetMapping("/{id}")
     public Optional<AgendaItem> getById(@PathVariable("id") String id) {
         return agendaItems.stream().filter(p -> p.getId().equals(id)).findFirst();
+    }
+
+    @DeleteMapping()
+    public void clearAgendaItems(){
+        agendaItems.clear();
     }
 
     @ZeebeWorker(name = "agenda-worker", type = "agenda-publish")
