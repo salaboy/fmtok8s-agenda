@@ -1,32 +1,33 @@
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lljfz[0m
-{"level":"warn","ts":1583492635.672297,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583492635.6727467,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-wj5tl[0m
+{"level":"info","ts":1591005031.1197186,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591005031.1201928,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-fzjvq[0m
-{"level":"warn","ts":1583492636.7047048,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1583492636.7315018,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-hdw86[0m
+{"level":"info","ts":1591005031.5234966,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591005031.5246477,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-agenda-master-r-6q755-h7nz6[0m
-{"level":"warn","ts":1583492646.3103726,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583492648.3979285,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/fmtok8s-agenda.git @ v0.0.13 in path /workspace/source"}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-agenda-master-r-gr44x-bz4j8[0m
+{"level":"info","ts":1591005038.5803683,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591005039.7463844,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/fmtok8s-agenda.git @ v0.0.26 in path /workspace/source"}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:4263c540749b89d8d86c0841729cb7823b7d30dc
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:db5fd56573578116aa63c5f849ba850f95ea69e1
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
 Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] ---------------< com.*******.conferences:fmtok8s-agenda >---------------
-[INFO] Building From Monolith to K8S :: Agenda Service 0.0.13
+[INFO] Building From Monolith to K8S :: Agenda Service 0.0.26
 [INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ fmtok8s-agenda ---
 [INFO] 
@@ -39,51 +40,71 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 3 source files to /workspace/source/target/classes
 [INFO] 
+[INFO] --- spring-cloud-contract-maven-plugin:2.2.1.RELEASE:generateTests (default-generateTests) @ fmtok8s-agenda ---
+[INFO] Generating server tests source code for Spring Cloud Contract Verifier contract verification
+[INFO] Will use contracts provided in the folder [/workspace/source/src/test/resources/contracts]
+[INFO] Directory with contract is present at [/workspace/source/src/test/resources/contracts]
+[INFO] Test Source directory: /workspace/source/target/generated-test-sources/contracts added.
+[INFO] Using [null] as base class for test classes, [null] as base package for tests, [com.*******.conferences.agenda] as package with base classes, base class mappings []
+[INFO] Creating new class file [/workspace/source/target/generated-test-sources/contracts/com/*******/conferences/agenda/ContractVerifierTest.java]
+[INFO] Generated 1 test classes.
+[INFO] 
+[INFO] --- spring-cloud-contract-maven-plugin:2.2.1.RELEASE:convert (default-convert) @ fmtok8s-agenda ---
+[INFO] Will use contracts provided in the folder [/workspace/source/src/test/resources/contracts]
+[INFO] Copying Spring Cloud Contract Verifier contracts to [/workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.26/contracts]. Only files matching [.*] pattern will end up in the final JAR with stubs.
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Converting from Spring Cloud Contract Verifier contracts to WireMock stubs mappings
+[INFO]      Spring Cloud Contract Verifier contracts directory: /workspace/source/src/test/resources/contracts
+[INFO] Stub Server stubs mappings directory: /workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.26/mappings
+[INFO] Creating new stub [/workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.26/mappings/should accept POST with new Proposal.json]
+[INFO] 
 [INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ fmtok8s-agenda ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] Copying 1 resource
+[INFO] skip non existing resourceDirectory /workspace/source/target/generated-test-resources/contracts
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ fmtok8s-agenda ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /workspace/source/target/test-classes
+[INFO] Compiling 3 source files to /workspace/source/target/test-classes
 [INFO] 
 [INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ fmtok8s-agenda ---
 [INFO] 
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /workspace/source/target/surefire-reports/2020-03-06T11-04-40_286-jvmRun1.dumpstream
-11:04:45.683 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.*******.conferences.agenda.DemoApplicationTests]
-11:04:45.707 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-11:04:45.717 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-11:04:45.723 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.*******.conferences.agenda.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-11:04:45.732 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.*******.conferences.agenda.DemoApplicationTests], using SpringBootContextLoader
-11:04:45.742 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.DemoApplicationTests]: class path resource [com/*******/conferences/agenda/DemoApplicationTests-context.xml] does not exist
-11:04:45.759 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.DemoApplicationTests]: class path resource [com/*******/conferences/agenda/DemoApplicationTestsContext.groovy] does not exist
-11:04:45.766 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.*******.conferences.agenda.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-11:04:45.775 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.*******.conferences.agenda.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:04:45.782 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:45.798 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.*******.conferences.agenda.DemoApplication for test class com.*******.conferences.agenda.DemoApplicationTests
-11:04:45.833 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.*******.conferences.agenda.DemoApplicationTests]: using defaults.
-11:04:45.849 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-11:04:45.863 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
-11:04:45.874 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
-11:04:45.883 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-11:04:45.899 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3da05287, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e636ea3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@115667d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@736caf7a, org.springframework.test.context.event.EventPublishingTestExecutionListener@4ce7fffa, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@497486b3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@63f8276e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@75f95314, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6127a7e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6bbe2511]
-11:04:45.911 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:45.914 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:46.283 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:46.297 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-[INFO] Running com.*******.conferences.agenda.DemoApplicationTests
-11:04:46.332 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:46.333 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:46.340 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:46.347 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:46.372 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2b5f4d54 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@5f7b97da testClass = DemoApplicationTests, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@69e153c5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74ea2410, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4be29ed9, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@17f9d882, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4681c175], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
-11:04:46.380 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:46.381 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.DemoApplicationTests]
-11:04:46.395 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@2b5f4d54 testClass = DemoApplicationTests, testInstance = com.*******.conferences.agenda.DemoApplicationTests@47a5b70d, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@5f7b97da testClass = DemoApplicationTests, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@69e153c5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@74ea2410, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4be29ed9, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@17f9d882, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4681c175], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
-11:04:46.458 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /workspace/source/target/surefire-reports/2020-06-01T09-51-31_784-jvmRun1.dumpstream
+09:51:38.426 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.427 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+09:51:38.428 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+09:51:38.429 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.*******.conferences.agenda.ContractVerifierTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+09:51:38.483 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.*******.conferences.agenda.ContractVerifierTest], using SpringBootContextLoader
+09:51:38.485 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.ContractVerifierTest]: class path resource [com/*******/conferences/agenda/ContractVerifierTest-context.xml] does not exist
+09:51:38.486 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.ContractVerifierTest]: class path resource [com/*******/conferences/agenda/ContractVerifierTestContext.groovy] does not exist
+09:51:38.487 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.*******.conferences.agenda.ContractVerifierTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:51:38.487 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.*******.conferences.agenda.ContractVerifierTest]: ContractVerifierTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:51:38.490 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.497 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.*******.conferences.agenda.DemoApplication for test class com.*******.conferences.agenda.ContractVerifierTest
+09:51:38.507 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.*******.conferences.agenda.ContractVerifierTest]: using defaults.
+09:51:38.510 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:51:38.512 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+09:51:38.514 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+09:51:38.516 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+09:51:38.622 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61ce23ac, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3668d4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c3b9394, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6f2cfcc2, org.springframework.test.context.event.EventPublishingTestExecutionListener@7f6f61c8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4c2cc639, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ccb4b1b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4097cac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@ec2cc4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2a5b3fee]
+09:51:38.622 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.623 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.888 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.890 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+[INFO] Running com.*******.conferences.agenda.ContractVerifierTest
+09:51:38.900 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.902 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.903 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.904 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.917 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@ed3068a testClass = ContractVerifierTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@7c2b6087 testClass = ContractVerifierTest, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1c9b0314, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2d29b4ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7098b907, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@5c86dbc5, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@a8ef162], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> false]], class annotated with @DirtiesContext [false] with mode [null].
+09:51:38.925 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.926 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+09:51:38.934 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@ed3068a testClass = ContractVerifierTest, testInstance = com.*******.conferences.agenda.ContractVerifierTest@4cc6fa2a, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@7c2b6087 testClass = ContractVerifierTest, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1c9b0314, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2d29b4ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7098b907, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@5c86dbc5, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@a8ef162], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> false]]].
+09:51:39.107 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -91,134 +112,138 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.2.0.RELEASE)
+ :: Spring Boot ::        (v2.2.6.RELEASE)
 
-2020-03-06 11:04:47.543  INFO 71 --- [           main] c.s.c.agenda.DemoApplicationTests        : Starting DemoApplicationTests on *******-fmtok8s-agenda-master-r-6q755-13-from-build-pack-svrb7 with PID 71 (started by root in /workspace/source)
-2020-03-06 11:04:47.565  INFO 71 --- [           main] c.s.c.agenda.DemoApplicationTests        : No active profile set, falling back to default profiles: default
-2020-03-06 11:04:56.308  INFO 71 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-03-06 11:04:58.481  INFO 71 --- [           main] c.s.c.agenda.DemoApplicationTests        : Started DemoApplicationTests in 11.975 seconds (JVM running for 17.098)
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.273 s - in com.*******.conferences.agenda.DemoApplicationTests
-[WARNING] ForkStarter IOException: org.springframework.test.context.CacheAwareContextLoaderDelegate)]
- using SpringBootContextLoader
- Context.groovy}.
- non-private, non-final, nested classes annotated with @Configuration.
- org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
- org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6e4566f1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4b6e2263, org.springframework.test.context.support.DirtiesContextTestExecutionListener@344f4dea, org.springframework.test.context.event.EventPublishingTestExecutionListener@1b7c473a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5e4bd84a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@648c94da, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2a62b5bc, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@53de625d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@535779e4]. See the dump file /workspace/source/target/surefire-reports/2020-03-06T11-04-40_286-jvmRun1.dumpstream
+2020-06-01 09:51:39.993  INFO 73 --- [           main] c.s.c.agenda.ContractVerifierTest        : Starting ContractVerifierTest on *******-fmtok8s-agenda-master-r-gr44x-13-from-build-pack-tfhfk with PID 73 (started by root in /workspace/source)
+2020-06-01 09:51:39.995  INFO 73 --- [           main] c.s.c.agenda.ContractVerifierTest        : No active profile set, falling back to default profiles: default
+2020-06-01 09:51:46.297  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.processor.PostProcessorConfiguration' of type [io.zeebe.spring.client.config.processor.PostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 09:51:46.309  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration' of type [io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 09:51:46.317  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeExpressionResolver' of type [io.zeebe.spring.util.ZeebeExpressionResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 09:51:46.382  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeDeploymentValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeDeploymentValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 09:51:46.397  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deploymentPostProcessor' of type [io.zeebe.spring.client.config.processor.DeploymentPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 09:51:46.418  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeWorkerValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeWorkerValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 09:51:46.426  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeWorkerPostProcessor' of type [io.zeebe.spring.client.config.processor.ZeebeWorkerPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 09:51:47.134  INFO 73 --- [           main] i.z.s.c.c.p.ZeebeWorkerPostProcessor     : zeebeWorker: ClassInfo(bean=com.*******.conferences.agenda.DemoApplication$$EnhancerBySpringCGLIB$$5a10e46@2fca3eb5, beanName=demoApplication)
+2020-06-01 09:51:55.320  INFO 73 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-06-01 09:52:00.100  INFO 73 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 33099
+2020-06-01 09:52:00.106  INFO 73 --- [           main] c.s.c.agenda.ContractVerifierTest        : Started ContractVerifierTest in 20.994 seconds (JVM running for 27.224)
+2020-06-01 09:52:05.109  INFO 73 --- [or-http-epoll-2] c.s.conferences.agenda.DemoApplication   : > New Agenda Item Received: AgendaItem{id='9d26b402-7bb7-40d8-9df9-8563f767721b', title='NZPZSOQNABWTAXKODDOC', author='ZEUMMCJYABFDRVVIQVII', day='JKIDPFIRQAUZYCAIBMCF', time='YFSHMHHXZAURLEFPBGLB'}
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.827 s - in com.*******.conferences.agenda.ContractVerifierTest
 [INFO] 
 [INFO] Results:
 [INFO] 
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] 
-[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ fmtok8s-agenda ---
-[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.13.jar
+[INFO] --- spring-cloud-contract-maven-plugin:2.2.1.RELEASE:generateStubs (default-generateStubs) @ fmtok8s-agenda ---
+[INFO] Files matching this pattern will be excluded from stubs generation []
+[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.26-stubs.jar
 [INFO] 
-[INFO] --- spring-boot-maven-plugin:2.2.0.RELEASE:repackage (repackage) @ fmtok8s-agenda ---
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ fmtok8s-agenda ---
+[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.26.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.6.RELEASE:repackage (repackage) @ fmtok8s-agenda ---
 [INFO] Replacing main artifact with repackaged archive
 [INFO] 
 [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ fmtok8s-agenda ---
-[INFO] Installing /workspace/source/target/fmtok8s-agenda-0.0.13.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.13/fmtok8s-agenda-0.0.13.jar
-[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.13/fmtok8s-agenda-0.0.13.pom
+[INFO] Installing /workspace/source/target/app.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.26/fmtok8s-agenda-0.0.26.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.26/fmtok8s-agenda-0.0.26.pom
+[INFO] Installing /workspace/source/target/fmtok8s-agenda-0.0.26-stubs.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.26/fmtok8s-agenda-0.0.26-stubs.jar
 [INFO] 
 [INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ fmtok8s-agenda ---
 [INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  51.918 s
-[INFO] Finished at: 2020-03-06T11:05:07Z
+[INFO] Total time:  01:28 min
+[INFO] Finished at: 2020-06-01T09:52:15Z
 [INFO] ------------------------------------------------------------------------
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
 v1.0.1
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
-[36mINFO[0m[0000] Downloading base image openjdk:11-jre-slim   
-ERROR: logging before flag.Parse: E0306 11:05:09.283776      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E0306 11:05:09.289880      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-2020/03/06 11:05:09 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:88d4192a5dab8de64fbeec699bcea3739f097f78f3184cd4e2aea6d7ac238da7: no such file or directory 
-[36mINFO[0m[0001] Downloading base image openjdk:11-jre-slim   
-2020/03/06 11:05:10 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0002] cmd: EXPOSE                                  
-[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
-[36mINFO[0m[0002] Using files from context: [/workspace/source/target/fmtok8s-agenda-0.0.13.jar] 
-[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
-[36mINFO[0m[0002] Taking snapshot of full filesystem...        
-[36mINFO[0m[0002] ENV PORT 8080                                
-[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0002] ENV CLASSPATH /opt/lib                       
-[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0002] EXPOSE 8080                                  
-[36mINFO[0m[0002] cmd: EXPOSE                                  
-[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
-[36mINFO[0m[0002] COPY pom.xml target/lib* /opt/lib/           
-[36mINFO[0m[0002] Taking snapshot of files...                  
-[36mINFO[0m[0002] Using files from context: [/workspace/source/target/fmtok8s-agenda-0.0.13.jar] 
-[36mINFO[0m[0002] COPY target/*.jar /opt/app.jar               
-[36mINFO[0m[0002] Taking snapshot of files...                  
-[36mINFO[0m[0003] WORKDIR /opt                                 
-[36mINFO[0m[0003] cmd: workdir                                 
-[36mINFO[0m[0003] Changed working directory to /opt            
-[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0003] ENTRYPOINT exec java $JAVA_OPTS -jar app.jar 
-[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
-2020/03/06 11:05:12 existing blob: sha256:d5c28bc4eb5532356cd06f142ed9cd6cee0811be74e992fdd2190fee8cbcf710
-2020/03/06 11:05:12 existing blob: sha256:8afa8e973e226cdc57cde0ef199d85ee1aa93b5f6a04abf68dc4952cdab931d5
-2020/03/06 11:05:12 existing blob: sha256:68ced04f60ab5c7a5f1d0b0b4e7572c5a4c8cce44866513d30d9df1a15277d6b
-2020/03/06 11:05:12 existing blob: sha256:4874c5772968dcab87c114bee2baf2c7e9a06dda36e63bdfeab71bd4d6f02890
-2020/03/06 11:05:16 pushed blob: sha256:201bc791218b813a89935087518f63a6c4878ad8f5b616e8c3ed17b94f91b859
-2020/03/06 11:05:16 pushed blob: sha256:065b451ed0639273751915299ea9e6cf5d7e3edbcaa786a4fc9e72a628765b27
-2020/03/06 11:05:17 pushed blob: sha256:55d075f51aa7e054fe3ba90ab2612de12731377c667c06d59e70e5dc6b3bf12f
-2020/03/06 11:05:19 gcr.io/camunda-consulting-de/fmtok8s-agenda:0.0.13: digest: sha256:c43a02c5e0d1325c8d295471fb24ba8a3c75e9109da094f64ae79c0bf9c2ff36 size: 1243
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0601 09:52:18.406807      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest openjdk:11-jre-slim 
+E0601 09:52:18.852523      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0601 09:52:18.856677      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0004] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0005] Executing 0 build triggers                   
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0005] Checking for cached layer gcr.io/camunda-researchanddevelopment/cache:7582c625891496bc5c4c7254bef46c2dc7f68668fe5fb307b97b23ed5846de55... 
+[36mINFO[0m[0006] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
+[36mINFO[0m[0006] Unpacking rootfs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
+[36mINFO[0m[0011] ENV PORT 8080                                
+[36mINFO[0m[0011] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0011] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0011] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0011] EXPOSE 8080                                  
+[36mINFO[0m[0011] cmd: EXPOSE                                  
+[36mINFO[0m[0011] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0011] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0011] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0011] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0011] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0011] Resolving 1 paths                            
+[36mINFO[0m[0011] Taking snapshot of files...                  
+[36mINFO[0m[0011] Pushing layer gcr.io/camunda-researchanddevelopment/cache:7582c625891496bc5c4c7254bef46c2dc7f68668fe5fb307b97b23ed5846de55 to cache now 
+[36mINFO[0m[0011] COPY target/app.jar /opt/app.jar             
+[36mINFO[0m[0011] Resolving 1 paths                            
+[36mINFO[0m[0011] Taking snapshot of files...                  
+[36mINFO[0m[0013] WORKDIR /opt                                 
+[36mINFO[0m[0013] cmd: workdir                                 
+[36mINFO[0m[0013] Changed working directory to /opt            
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] ENTRYPOINT exec java $JAVA_OPTS -noverify -jar app.jar 
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] Pushing layer gcr.io/camunda-researchanddevelopment/cache:aae6285c424338ac29582710aa7128976b718e0b1d2a7342bd5c1ccf78c66355 to cache now 
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/fmtok8s-agenda to an unshallow repository
-Generating change log from git ref 2cad0402685bebb557246ac1139f0f8c5c42c970 => 42f5b734d009b6e4ef157a974cd5425c95b6e09c
-WARNING: Failed to enrich commit 4263c540749b89d8d86c0841729cb7823b7d30dc with issues: selected more than one user from users.jenkins.io: [******* x-0]
-WARNING: Failed to enrich commit 4263c540749b89d8d86c0841729cb7823b7d30dc with issues: selected more than one user from users.jenkins.io: [******* x-0]
+Generating change log from git ref 8f9a62423b45b33dabf53181727e7dc311e8ce7b => 6c1533f11722a98f89b2eec8af8807d706fa0e3e
+WARNING: Failed to enrich commit db5fd56573578116aa63c5f849ba850f95ea69e1 with issues: selected more than one user from users.jenkins.io: [******* x-0]
+WARNING: Failed to enrich commit db5fd56573578116aa63c5f849ba850f95ea69e1 with issues: selected more than one user from users.jenkins.io: [******* x-0]
 Finding issues in commit messages using git format
-WARNING: No release found for *******/fmtok8s-agenda and tag v0.0.13 so creating a new release
-Updated the release information at https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.13
+WARNING: No release found for *******/fmtok8s-agenda and tag v0.0.26 so creating a new release
+Updated the release information at https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.26
 generated: /workspace/source/charts/fmtok8s-agenda/templates/release.yaml
-Created Release fmtok8s-agenda-0-0-13 resource in namespace **
-Updating PipelineActivity *******-fmtok8s-agenda-master-13 with version 0.0.13
-Updated PipelineActivities *******-fmtok8s-agenda-master-13 with release notes URL: https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.13
+Created Release fmtok8s-agenda-0-0-26 resource in namespace **
+Updating PipelineActivity *******-fmtok8s-agenda-master-13 with version 0.0.26
+Updated PipelineActivities *******-fmtok8s-agenda-master-13 with release notes URL: https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.26
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file fmtok8s-agenda-0.0.13.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file fmtok8s-agenda-0.0.26.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Promoting app fmtok8s-agenda version 0.0.13 to namespace **-staging
-WARNING: 
-Created Pull Request: https://github.com/*******/environment-kubecon-prep-staging/pull/76
-Added label updatebot to Pull Request https://github.com/*******/environment-kubecon-prep-staging/pull/76
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/76
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/76
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/76
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/76
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/76
-got git provider status pending from PR https://github.com/*******/environment-kubecon-prep-staging/pull/76
-Pull Request https://github.com/*******/environment-kubecon-prep-staging/pull/76 is merged at sha 8349bdb9309667b835aec03ba8aa669bf3a01092
+Promoting app fmtok8s-agenda version 0.0.26 to namespace **-staging
+Created Pull Request: https://github.com/*******/environment-jnation-tests-staging/pull/35
+Added label updatebot to Pull Request https://github.com/*******/environment-jnation-tests-staging/pull/35
+got git provider status pending from PR https://github.com/*******/environment-jnation-tests-staging/pull/35
+got git provider status pending from PR https://github.com/*******/environment-jnation-tests-staging/pull/35
+got git provider status pending from PR https://github.com/*******/environment-jnation-tests-staging/pull/35
+Pull Request https://github.com/*******/environment-jnation-tests-staging/pull/35 is merged at sha 7cd74240a81c2fe293d91592f7c3e11bdc2b1c5a
 Pull Request merged but we are not waiting for the update pipeline to complete!
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-6q755-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-step10[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-gr44x-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-step10[0m
 Using https://github.com/*******/fmtok8s-agenda as source for change discovered from git repo in /workspace/source
-WARNING: 
-Updated Pull Request: https://github.com/*******/fmtok8s-kubecon-app/pull/11
-Added label updatebot to Pull Request https://github.com/*******/fmtok8s-kubecon-app/pull/11
+Updated Pull Request: https://github.com/*******/fmtok8s-kubecon-app/pull/15
+Added label updatebot to Pull Request https://github.com/*******/fmtok8s-kubecon-app/pull/15
