@@ -64,4 +64,15 @@ public class AgendaItem {
     public void setTime(String time) {
         this.time = time;
     }
+
+    @Override
+    public String toString() {
+        return "AgendaItem{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", day='" + day + '\'' +
+                ", time='" + time + '\'' +
+                '}';
+    }
 }
