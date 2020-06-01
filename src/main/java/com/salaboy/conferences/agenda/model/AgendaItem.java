@@ -18,6 +18,7 @@ public class AgendaItem {
     }
 
     public AgendaItem(String title, String author, String day, String time) {
+        this();
         this.title = title;
         this.author = author;
         this.day = day;
@@ -74,5 +75,22 @@ public class AgendaItem {
                 ", day='" + day + '\'' +
                 ", time='" + time + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AgendaItem that = (AgendaItem) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(title, that.title) &&
+                Objects.equals(author, that.author) &&
+                Objects.equals(day, that.day) &&
+                Objects.equals(time, that.time);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, author, day, time);
     }
 }
