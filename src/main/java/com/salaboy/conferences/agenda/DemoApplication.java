@@ -71,7 +71,7 @@ public class DemoApplication {
         return agendaItems.stream().filter(p -> p.getId().equals(id)).findFirst();
     }
 
-    @DeleteMapping()
+    @DeleteMapping("/")
     public void clearAgendaItems(){
         agendaItems.clear();
     }
