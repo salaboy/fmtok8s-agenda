@@ -31,17 +31,7 @@ public class DemoApplication {
     private String version;
 
     private ObjectMapper objectMapper = new ObjectMapper();
-    private Set<AgendaItem> agendaItems = new TreeSet<>(
-            new Comparator<AgendaItem>() {
-                @Override
-                public int compare(AgendaItem t, AgendaItem t1) {
-                    if (t != null && t1 != null) {
-                        return t.getTime().compareTo(t1.getTime());
-                    }
-                    return 0;
-                }
-            }
-    );
+    private Set<AgendaItem> agendaItems = new TreeSet<>(Comparator.comparing(AgendaItem::getTime).thenComparing(AgendaItem::getId));
 
 
     @GetMapping("/info")
@@ -52,8 +42,14 @@ public class DemoApplication {
     @PostMapping()
     public String newAgendaItem(@RequestBody AgendaItem agendaItem) {
         log.info("> New Agenda Item Received: " + agendaItem);
-        agendaItems.add(agendaItem);
-        return "Agenda Item Added to Agenda";
+        boolean added = agendaItems.add(agendaItem);
+        if(added) {
+            log.info("> Agenda Item Added to Agenda: " + agendaItem);
+            return "Agenda Item Added to Agenda";
+        }else{
+            log.info("> Agenda Item NOT added to Agenda: "+ agendaItem);
+            return "Agenda Item Not added";
+        }
     }
 
     @GetMapping()
