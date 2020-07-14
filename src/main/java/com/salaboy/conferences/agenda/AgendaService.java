@@ -11,7 +11,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -21,10 +20,10 @@ import java.util.stream.Collectors;
 @RestController
 @EnableZeebeClient
 @Slf4j
-public class DemoApplication {
+public class AgendaService {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(AgendaService.class, args);
     }
 
     @Value("${version:0.0.0}")
@@ -42,6 +41,9 @@ public class DemoApplication {
     @PostMapping()
     public String newAgendaItem(@RequestBody AgendaItem agendaItem) {
         log.info("> New Agenda Item Received: " + agendaItem);
+        if(agendaItem.getTitle().contains("fail")){
+            throw new IllegalStateException("Something went wrong with adding the Agenda Item: " + agendaItem);
+        }
         boolean added = agendaItems.add(agendaItem);
         if(added) {
             log.info("> Agenda Item Added to Agenda: " + agendaItem);
