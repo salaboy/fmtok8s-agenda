@@ -1,31 +1,31 @@
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-qx7hh[0m
-{"level":"info","ts":1593508972.9010456,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1593508972.904915,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1598613617.1836464,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-5h4nc[0m
-{"level":"info","ts":1593508974.021808,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1593508974.023472,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-agenda-master-r-n85pd-p9j7b[0m
-{"level":"info","ts":1593508989.0216696,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1593508990.3350377,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/fmtok8s-agenda.git @ v0.0.36 in path /workspace/source"}
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-salaboy-fmtok8s-agenda-master-97sqj-bgrmb[0m
+{"level":"info","ts":1598613626.2586086,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*******/fmtok8s-agenda.git @ v0.0.40 in path /workspace/source"}
+{"level":"warn","ts":1598613626.2587209,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1598613626.29923,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:9be250b7401415c1b94180d5ccffeb6a9958e255
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
 Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] ---------------< com.*******.conferences:fmtok8s-agenda >---------------
-[INFO] Building From Monolith to K8S :: Agenda Service 0.0.36
+[INFO] Building From Monolith to K8S :: Agenda Service 0.0.40
 [INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
 [INFO] 
@@ -51,13 +51,13 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] 
 [INFO] --- spring-cloud-contract-maven-plugin:2.2.1.RELEASE:convert (default-convert) @ fmtok8s-agenda ---
 [INFO] Will use contracts provided in the folder [/workspace/source/src/test/resources/contracts]
-[INFO] Copying Spring Cloud Contract Verifier contracts to [/workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.36/contracts]. Only files matching [.*] pattern will end up in the final JAR with stubs.
+[INFO] Copying Spring Cloud Contract Verifier contracts to [/workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.40/contracts]. Only files matching [.*] pattern will end up in the final JAR with stubs.
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] Converting from Spring Cloud Contract Verifier contracts to WireMock stubs mappings
 [INFO]      Spring Cloud Contract Verifier contracts directory: /workspace/source/src/test/resources/contracts
-[INFO] Stub Server stubs mappings directory: /workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.36/mappings
-[INFO] Creating new stub [/workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.36/mappings/should accept POST with new Proposal.json]
+[INFO] Stub Server stubs mappings directory: /workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.40/mappings
+[INFO] Creating new stub [/workspace/source/target/stubs/META-INF/com.*******.conferences/fmtok8s-agenda/0.0.40/mappings/should accept POST with new Proposal.json]
 [INFO] 
 [INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ fmtok8s-agenda ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -73,38 +73,38 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /workspace/source/target/surefire-reports/2020-06-30T09-24-29_539-jvmRun1.dumpstream
-09:24:39.041 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.*******.conferences.agenda.ContractVerifierTest]
-09:24:39.060 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-09:24:39.060 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-09:24:39.061 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.*******.conferences.agenda.ContractVerifierTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-09:24:39.073 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.*******.conferences.agenda.ContractVerifierTest], using SpringBootContextLoader
-09:24:39.085 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.ContractVerifierTest]: class path resource [com/*******/conferences/agenda/ContractVerifierTest-context.xml] does not exist
-09:24:39.094 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.ContractVerifierTest]: class path resource [com/*******/conferences/agenda/ContractVerifierTestContext.groovy] does not exist
-09:24:39.095 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.*******.conferences.agenda.ContractVerifierTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-09:24:39.103 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.*******.conferences.agenda.ContractVerifierTest]: ContractVerifierTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-09:24:39.127 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:39.133 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.*******.conferences.agenda.DemoApplication for test class com.*******.conferences.agenda.ContractVerifierTest
-09:24:39.173 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.*******.conferences.agenda.ContractVerifierTest]: using defaults.
-09:24:39.181 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-09:24:39.193 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
-09:24:39.204 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
-09:24:39.209 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-09:24:39.227 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61ce23ac, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3668d4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c3b9394, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6f2cfcc2, org.springframework.test.context.event.EventPublishingTestExecutionListener@7f6f61c8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4c2cc639, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ccb4b1b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4097cac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@ec2cc4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2a5b3fee]
-09:24:39.234 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:39.245 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:40.107 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:40.118 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /workspace/source/target/surefire-reports/2020-08-28T11-21-13_622-jvmRun1.dumpstream
+11:21:18.587 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.588 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:21:18.589 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:21:18.589 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.*******.conferences.agenda.ContractVerifierTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:21:18.590 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.*******.conferences.agenda.ContractVerifierTest], using SpringBootContextLoader
+11:21:18.592 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.ContractVerifierTest]: class path resource [com/*******/conferences/agenda/ContractVerifierTest-context.xml] does not exist
+11:21:18.592 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.*******.conferences.agenda.ContractVerifierTest]: class path resource [com/*******/conferences/agenda/ContractVerifierTestContext.groovy] does not exist
+11:21:18.593 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.*******.conferences.agenda.ContractVerifierTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:21:18.593 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.*******.conferences.agenda.ContractVerifierTest]: ContractVerifierTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:21:18.596 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.597 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.*******.conferences.agenda.AgendaService for test class com.*******.conferences.agenda.ContractVerifierTest
+11:21:18.600 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.*******.conferences.agenda.ContractVerifierTest]: using defaults.
+11:21:18.600 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+11:21:18.601 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+11:21:18.602 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+11:21:18.603 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+11:21:18.603 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3668d4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1c3b9394, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6f2cfcc2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7f6f61c8, org.springframework.test.context.event.EventPublishingTestExecutionListener@4c2cc639, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@ccb4b1b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4097cac, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@ec2cc4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2a5b3fee, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7c1e2a2d]
+11:21:18.603 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.604 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.915 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.915 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
 [INFO] Running com.*******.conferences.agenda.ContractVerifierTest
-09:24:40.151 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:40.155 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:40.160 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:40.176 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:40.224 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@ed3068a testClass = ContractVerifierTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@7c2b6087 testClass = ContractVerifierTest, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1c9b0314, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2d29b4ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7098b907, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@5c86dbc5, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@a8ef162], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> false]], class annotated with @DirtiesContext [false] with mode [null].
-09:24:40.275 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:40.276 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
-09:24:40.303 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@ed3068a testClass = ContractVerifierTest, testInstance = com.*******.conferences.agenda.ContractVerifierTest@4cc6fa2a, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@7c2b6087 testClass = ContractVerifierTest, locations = '{}', classes = '{class com.*******.conferences.agenda.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1c9b0314, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2d29b4ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7098b907, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@5c86dbc5, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@a8ef162], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> false]]].
-09:24:40.524 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+11:21:18.982 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.983 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.985 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.986 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:18.992 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7c2b6087 testClass = ContractVerifierTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@3fffff43 testClass = ContractVerifierTest, locations = '{}', classes = '{class com.*******.conferences.agenda.AgendaService}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@45385f75, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@69ee81fc, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@503f91c3, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@461ad730, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2eea88a1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> false]], class annotated with @DirtiesContext [false] with mode [null].
+11:21:19.000 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:19.000 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.*******.conferences.agenda.ContractVerifierTest]
+11:21:19.005 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@7c2b6087 testClass = ContractVerifierTest, testInstance = com.*******.conferences.agenda.ContractVerifierTest@40f1be1b, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@3fffff43 testClass = ContractVerifierTest, locations = '{}', classes = '{class com.*******.conferences.agenda.AgendaService}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@45385f75, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@69ee81fc, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@503f91c3, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@461ad730, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2eea88a1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> false]]].
+11:21:19.116 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, server.port=0, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -114,22 +114,28 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.6.RELEASE)
 
-2020-06-30 09:24:42.355  INFO 70 --- [           main] c.s.c.agenda.ContractVerifierTest        : Starting ContractVerifierTest on *******-fmtok8s-agenda-master-r-n85pd-1-from-build-pack-tbxqw-p with PID 70 (started by root in /workspace/source)
-2020-06-30 09:24:42.369  INFO 70 --- [           main] c.s.c.agenda.ContractVerifierTest        : No active profile set, falling back to default profiles: default
-2020-06-30 09:24:51.672  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.processor.PostProcessorConfiguration' of type [io.zeebe.spring.client.config.processor.PostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-30 09:24:51.709  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration' of type [io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-30 09:24:51.742  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeExpressionResolver' of type [io.zeebe.spring.util.ZeebeExpressionResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-30 09:24:51.795  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeDeploymentValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeDeploymentValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-30 09:24:51.839  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deploymentPostProcessor' of type [io.zeebe.spring.client.config.processor.DeploymentPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-30 09:24:51.897  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeWorkerValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeWorkerValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-30 09:24:51.924  INFO 70 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeWorkerPostProcessor' of type [io.zeebe.spring.client.config.processor.ZeebeWorkerPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-30 09:24:52.939  INFO 70 --- [           main] i.z.s.c.c.p.ZeebeWorkerPostProcessor     : zeebeWorker: ClassInfo(bean=com.*******.conferences.agenda.DemoApplication$$EnhancerBySpringCGLIB$$5a10e46@69eb544f, beanName=demoApplication)
-2020-06-30 09:24:59.592  INFO 70 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-06-30 09:25:05.879  INFO 70 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 45651
-2020-06-30 09:25:05.915  INFO 70 --- [           main] c.s.c.agenda.ContractVerifierTest        : Started ContractVerifierTest in 25.372 seconds (JVM running for 34.927)
-2020-06-30 09:25:14.023  INFO 70 --- [or-http-epoll-2] c.s.conferences.agenda.DemoApplication   : > New Agenda Item Received: AgendaItem{id='eb565e3b-b88c-4460-af69-63f553fe1aee', title='JHERZMIZFQSSDGOYWRER', author='STDCXRYXUBHSCJMBVHWW', day='ZXGJJLIDTXMZESWWHOPI', time='NTEMQFGUYFDWOSYOSHSJ'}
-2020-06-30 09:25:14.033  INFO 70 --- [or-http-epoll-2] c.s.conferences.agenda.DemoApplication   : > Agenda Item Added to Agenda: AgendaItem{id='eb565e3b-b88c-4460-af69-63f553fe1aee', title='JHERZMIZFQSSDGOYWRER', author='STDCXRYXUBHSCJMBVHWW', day='ZXGJJLIDTXMZESWWHOPI', time='NTEMQFGUYFDWOSYOSHSJ'}
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.544 s - in com.*******.conferences.agenda.ContractVerifierTest
+2020-08-28 11:21:19.993  INFO 74 --- [           main] c.s.c.agenda.ContractVerifierTest        : Starting ContractVerifierTest on *******-fmtok8s-agenda-master-97sqj-1-from-build-pack-s6v-xbjcs with PID 74 (started by root in /workspace/source)
+2020-08-28 11:21:19.995  INFO 74 --- [           main] c.s.c.agenda.ContractVerifierTest        : No active profile set, falling back to default profiles: default
+2020-08-28 11:21:25.393  INFO 74 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.config.processor.PostProcessorConfiguration' of type [io.zeebe.spring.client.config.processor.PostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 11:21:25.402  INFO 74 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration' of type [io.zeebe.spring.client.bean.value.factory.ReadAnnotationValueConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 11:21:25.407  INFO 74 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeExpressionResolver' of type [io.zeebe.spring.util.ZeebeExpressionResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 11:21:25.419  INFO 74 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeDeploymentValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeDeploymentValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 11:21:25.487  INFO 74 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deploymentPostProcessor' of type [io.zeebe.spring.client.config.processor.DeploymentPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 11:21:25.494  INFO 74 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'readZeebeWorkerValue' of type [io.zeebe.spring.client.bean.value.factory.ReadZeebeWorkerValue] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 11:21:25.499  INFO 74 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'zeebeWorkerPostProcessor' of type [io.zeebe.spring.client.config.processor.ZeebeWorkerPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-28 11:21:26.211  INFO 74 --- [           main] i.z.s.c.c.p.ZeebeWorkerPostProcessor     : zeebeWorker: ClassInfo(bean=com.*******.conferences.agenda.AgendaService$$EnhancerBySpringCGLIB$$99008b81@7cb29ea8, beanName=agendaService)
+2020-08-28 11:21:33.994  INFO 74 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-28 11:21:38.018  INFO 74 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 36775
+2020-08-28 11:21:38.088  INFO 74 --- [           main] c.s.c.agenda.ContractVerifierTest        : Started ContractVerifierTest in 18.902 seconds (JVM running for 23.505)
+2020-08-28 11:21:41.992  INFO 74 --- [or-http-epoll-2] c.s.conferences.agenda.AgendaService     : > New Agenda Item Received: AgendaItem{id='9f905154-c921-4a2e-8c30-882fd120d06e', title='CAWYBREWJUILKCVJRBAD', author='DEMPMCVQGAZCGWVWHGOL', day='ERXDGUGQPROHXRVHSAVG', time='RYJACFIPDCTTPSEODPSO'}
+2020-08-28 11:21:41.994  INFO 74 --- [or-http-epoll-2] c.s.conferences.agenda.AgendaService     : > Agenda Item Added to Agenda: AgendaItem{id='9f905154-c921-4a2e-8c30-882fd120d06e', title='CAWYBREWJUILKCVJRBAD', author='DEMPMCVQGAZCGWVWHGOL', day='ERXDGUGQPROHXRVHSAVG', time='RYJACFIPDCTTPSEODPSO'}
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.395 s - in com.*******.conferences.agenda.ContractVerifierTest
+[WARNING] ForkStarter IOException: org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+ using SpringBootContextLoader
+ Context.groovy}.
+ non-private, non-final, nested classes annotated with @Configuration.
+ org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@59f63e24, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@61f05988, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7ca33c24, org.springframework.test.context.event.EventPublishingTestExecutionListener@fade1fc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@67c2e933, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@41dd05a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@613a8ee1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@178213b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7103cb56]. See the dump file /workspace/source/target/surefire-reports/2020-08-28T11-21-13_622-jvmRun1.dumpstream
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -138,38 +144,38 @@ Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemor
 [INFO] 
 [INFO] --- spring-cloud-contract-maven-plugin:2.2.1.RELEASE:generateStubs (default-generateStubs) @ fmtok8s-agenda ---
 [INFO] Files matching this pattern will be excluded from stubs generation []
-[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.36-stubs.jar
+[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.40-stubs.jar
 [INFO] 
 [INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ fmtok8s-agenda ---
-[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.36.jar
+[INFO] Building jar: /workspace/source/target/fmtok8s-agenda-0.0.40.jar
 [INFO] 
 [INFO] --- spring-boot-maven-plugin:2.2.6.RELEASE:repackage (repackage) @ fmtok8s-agenda ---
 [INFO] Replacing main artifact with repackaged archive
 [INFO] 
 [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ fmtok8s-agenda ---
-[INFO] Installing /workspace/source/target/app.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.36/fmtok8s-agenda-0.0.36.jar
-[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.36/fmtok8s-agenda-0.0.36.pom
-[INFO] Installing /workspace/source/target/fmtok8s-agenda-0.0.36-stubs.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.36/fmtok8s-agenda-0.0.36-stubs.jar
+[INFO] Installing /workspace/source/target/app.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.40/fmtok8s-agenda-0.0.40.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.40/fmtok8s-agenda-0.0.40.pom
+[INFO] Installing /workspace/source/target/fmtok8s-agenda-0.0.40-stubs.jar to /home/jenkins/.mvnrepository/com/*******/conferences/fmtok8s-agenda/0.0.40/fmtok8s-agenda-0.0.40-stubs.jar
 [INFO] 
 [INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ fmtok8s-agenda ---
 [INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  02:07 min
-[INFO] Finished at: 2020-06-30T09:25:25Z
+[INFO] Total time:  01:20 min
+[INFO] Finished at: 2020-08-28T11:21:52Z
 [INFO] ------------------------------------------------------------------------
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
 v1.0.1
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
-E0630 09:25:27.336168       8 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0828 11:21:53.950908      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
 	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
-[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
-[36mINFO[0m[0000] Retrieving image manifest openjdk:11-jre-slim 
-E0630 09:25:27.757588       8 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-E0630 09:25:27.760979       8 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest openjdk:11-jre-slim 
+E0828 11:21:54.352273      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0828 11:21:54.355268      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
 [36mINFO[0m[0002] Retrieving image manifest openjdk:11-jre-slim 
 [36mINFO[0m[0003] Built cross stage deps: map[]                
 [36mINFO[0m[0003] Retrieving image manifest openjdk:11-jre-slim 
@@ -178,232 +184,69 @@ E0630 09:25:27.760979       8 metadata.go:166] while reading 'google-dockercfg-u
 [36mINFO[0m[0005] cmd: EXPOSE                                  
 [36mINFO[0m[0005] Adding exposed port: 8080/tcp                
 [36mINFO[0m[0005] Resolving srcs [pom.xml target/lib*]...      
-[36mINFO[0m[0005] Checking for cached layer gcr.io/camunda-researchanddevelopment/cache:67525be2735e1c2b56999aa3ecf5b65afb43b95b9fdd670590db60fc90fdbb49... 
-[36mINFO[0m[0006] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
-[36mINFO[0m[0006] Unpacking rootfs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
-[36mINFO[0m[0014] ENV PORT 8080                                
-[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0014] ENV CLASSPATH /opt/lib                       
-[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0014] EXPOSE 8080                                  
-[36mINFO[0m[0014] cmd: EXPOSE                                  
-[36mINFO[0m[0014] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0014] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0014] Resolving srcs [pom.xml target/lib*]...      
-[36mINFO[0m[0014] COPY pom.xml target/lib* /opt/lib/           
-[36mINFO[0m[0014] Resolving srcs [pom.xml target/lib*]...      
-[36mINFO[0m[0014] Resolving 1 paths                            
-[36mINFO[0m[0014] Taking snapshot of files...                  
-[36mINFO[0m[0014] Pushing layer gcr.io/camunda-researchanddevelopment/cache:67525be2735e1c2b56999aa3ecf5b65afb43b95b9fdd670590db60fc90fdbb49 to cache now 
-[36mINFO[0m[0014] COPY target/app.jar /opt/app.jar             
-[36mINFO[0m[0014] Resolving 1 paths                            
-[36mINFO[0m[0014] Taking snapshot of files...                  
-[36mINFO[0m[0016] Pushing layer gcr.io/camunda-researchanddevelopment/cache:1c90c348356f7d723df93c25d149480381dcff1b75b693a448149af1c8508549 to cache now 
-[36mINFO[0m[0016] WORKDIR /opt                                 
-[36mINFO[0m[0016] cmd: workdir                                 
-[36mINFO[0m[0016] Changed working directory to /opt            
-[36mINFO[0m[0016] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0016] ENTRYPOINT exec java $JAVA_OPTS -noverify -jar app.jar 
-[36mINFO[0m[0016] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0005] Checking for cached layer gcr.io/camunda-researchanddevelopment/cache:6ee4df006e0bebb73641be6b758d4410dcb1ad9f6cf0e1fc89386718665e0975... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
+[36mINFO[0m[0010] ENV PORT 8080                                
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] EXPOSE 8080                                  
+[36mINFO[0m[0010] cmd: EXPOSE                                  
+[36mINFO[0m[0010] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0010] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0010] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0010] Resolving 1 paths                            
+[36mINFO[0m[0010] Taking snapshot of files...                  
+[36mINFO[0m[0010] Pushing layer gcr.io/camunda-researchanddevelopment/cache:6ee4df006e0bebb73641be6b758d4410dcb1ad9f6cf0e1fc89386718665e0975 to cache now 
+[36mINFO[0m[0010] COPY target/app.jar /opt/app.jar             
+[36mINFO[0m[0010] Resolving 1 paths                            
+[36mINFO[0m[0010] Taking snapshot of files...                  
+[36mINFO[0m[0012] WORKDIR /opt                                 
+[36mINFO[0m[0012] cmd: workdir                                 
+[36mINFO[0m[0012] Changed working directory to /opt            
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] ENTRYPOINT exec java $JAVA_OPTS -noverify -jar app.jar 
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] Pushing layer gcr.io/camunda-researchanddevelopment/cache:50dc58d4ffa69de2f0215a70bdeb669e3d5258d71806f0c0085e30c47dc9c618 to cache now 
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/fmtok8s-agenda to an unshallow repository
-Generating change log from git ref 3d284efb9b5b00e6d8b333beca50d61869451a30 => 547a1fd41adc5b1cd1ec9dad0c92ff851d7a8328
-WARNING: No release found for *******/fmtok8s-agenda and tag v0.0.36 so creating a new release
-Updated the release information at https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.36
+Generating change log from git ref bca8fcb26e4f5b12114f1b1ad6019b9ced97abc9 => af3b0d485fd94f1bbede0e7b8d54e7fe7f44951b
+WARNING: No release found for *******/fmtok8s-agenda and tag v0.0.40 so creating a new release
+Updated the release information at https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.40
 generated: /workspace/source/charts/fmtok8s-agenda/templates/release.yaml
-Created Release fmtok8s-agenda-0-0-36 resource in namespace **
-Updating PipelineActivity *******-fmtok8s-agenda-master-1 with version 0.0.36
-Updated PipelineActivities *******-fmtok8s-agenda-master-1 with release notes URL: https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.36
+Created Release fmtok8s-agenda-0-0-40 resource in namespace **
+Updating PipelineActivity *******-fmtok8s-agenda-master-1 with version 0.0.40
+Updated PipelineActivities *******-fmtok8s-agenda-master-1 with release notes URL: https://github.com/*******/fmtok8s-agenda/releases/tag/v0.0.40
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file fmtok8s-agenda-0.0.36.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file fmtok8s-agenda-0.0.40.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Promoting app fmtok8s-agenda version 0.0.36 to namespace **-staging
-Created Pull Request: https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-Added label updatebot to Pull Request https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-WARNING: Failed to query the Pull Request last commit status for https://github.com/*******/environment-zeebe-helm-new-staging/pull/45 ref cee6535e57406979e792edb59942e9bdd6a857cd Could not find a status for repository *******/environment-zeebe-helm-new-staging with ref cee6535e57406979e792edb59942e9bdd6a857cd
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-got git provider status pending from PR https://github.com/*******/environment-zeebe-helm-new-staging/pull/45
-Pull Request https://github.com/*******/environment-zeebe-helm-new-staging/pull/45 is merged at sha c38fe1f2211f77403495bc3222ff68745310cd73
+Promoting app fmtok8s-agenda version 0.0.40 to namespace **-staging
+Created Pull Request: https://github.com/*******/environment-springone-2020-staging/pull/7
+Added label updatebot to Pull Request https://github.com/*******/environment-springone-2020-staging/pull/7
+got git provider status pending from PR https://github.com/*******/environment-springone-2020-staging/pull/7
+Pull Request https://github.com/*******/environment-springone-2020-staging/pull/7 is merged at sha f36a619dd7a168655a9f012b406e462e469b9e10
 Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names fmtok8s-agenda, **-fmtok8s-agenda, **-staging-fmtok8s-agenda
 
-Showing logs for build [32msalaboy-fmtok8s-agenda-master-r-n85pd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-step10[0m
+Showing logs for build [32msalaboy-fmtok8s-agenda-master-97sqj-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-step10[0m
 Using https://github.com/*******/fmtok8s-agenda as source for change discovered from git repo in /workspace/source
 Updated Pull Request: https://github.com/*******/fmtok8s-kubecon-app/pull/15
 Added label updatebot to Pull Request https://github.com/*******/fmtok8s-kubecon-app/pull/15
