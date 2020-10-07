@@ -5,14 +5,15 @@ import com.salaboy.conferences.agenda.AgendaServiceApplication;
 import com.salaboy.conferences.agenda.TestConfiguration;
 import com.salaboy.conferences.agenda.model.AgendaItem;
 import com.salaboy.conferences.agenda.repository.AgendaItemRepository;
+import org.junit.After;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -37,14 +38,18 @@ public class AgendaControllerIT {
     @Autowired
     private AgendaItemRepository agendaItemRepository;
 
-    @BeforeEach
-    public void beforeEach() {
-        deleteAll();
+    @Autowired
+    private ReactiveMongoTemplate reactiveMongoTemplate;
+
+    @After
+    public void after() {
+        reactiveMongoTemplate.dropCollection(AgendaItem.class)
+            .log()
+            .subscribe();
     }
 
     @Test
     public void getAll_ShouldReturnsAll() {
-        deleteAll();
 
         createAgendaItem(validWithDefaultDay());
         createAgendaItem(otherValidWithDefaultDay());
@@ -109,8 +114,6 @@ public class AgendaControllerIT {
 
     @Test
     public void getAllByDay() {
-
-        deleteAll();
 
         // arrange
         var agendaItem = validWithDefaultDay();
