@@ -9,12 +9,12 @@ import io.zeebe.client.api.response.ActivatedJob;
 import io.zeebe.client.api.worker.JobClient;
 import io.zeebe.spring.client.annotation.ZeebeWorker;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.*;
+import java.util.Random;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @RestController
@@ -23,12 +23,11 @@ import java.util.stream.Collectors;
 public class AgendaController {
 
     private final AgendaItemRepository agendaItemRepository;
+    private final ObjectMapper objectMapper;
 
-    @Autowired
-    private ObjectMapper objectMapper;
-
-    public AgendaController(AgendaItemRepository agendaItemRepository) {
+    public AgendaController(AgendaItemRepository agendaItemRepository, ObjectMapper objectMapper) {
         this.agendaItemRepository = agendaItemRepository;
+        this.objectMapper = objectMapper;
     }
 
     @PostMapping
@@ -36,21 +35,18 @@ public class AgendaController {
 
         log.info("> New Agenda Item Received: " + agendaItem);
 
-        if(agendaItem.getTitle().contains("fail")){
+        if (agendaItem.getTitle().contains("fail")) {
             throw new IllegalStateException("Something went wrong with adding the Agenda Item: " + agendaItem);
         }
 
-        return agendaItemRepository.save(agendaItem)
-                .map(item -> {
+        Mono<String> result = agendaItemRepository.save(agendaItem)
+                .doOnSuccess(i -> log.info("> Agenda Item Added to Agenda: {}", i))
+                .doOnError(i -> log.info("> Agenda Item NOT Added to Agenda: {}", i))
+                .map(i -> !Strings.isNullOrEmpty(i.getId()) ? "Agenda Item Added to Agenda" : "Agenda Item Not Added");
 
-                    if (!Strings.isNullOrEmpty(item.getId())) {
-                        log.info("> Agenda Item Added to Agenda: " + agendaItem);
-                        return "Agenda Item Added to Agenda";
-                    } else {
-                        log.info("> Agenda Item NOT Added to Agenda: " + agendaItem);
-                        return "Agenda Item Not Added";
-                    }
-                });
+        result.subscribe();
+
+        return result;
     }
 
     @GetMapping
@@ -70,7 +66,7 @@ public class AgendaController {
     }
 
     @DeleteMapping("/")
-    public Mono<Void> clearAgendaItems(){
+    public Mono<Void> clearAgendaItems() {
 
         log.info(">>> Deleting all");
         return agendaItemRepository.deleteAll();
