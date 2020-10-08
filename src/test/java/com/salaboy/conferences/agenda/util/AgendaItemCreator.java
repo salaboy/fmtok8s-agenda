@@ -1,4 +1,4 @@
-package com.salaboy.conferences.agenda;
+package com.salaboy.conferences.agenda.util;
 
 import com.salaboy.conferences.agenda.model.AgendaItem;
 

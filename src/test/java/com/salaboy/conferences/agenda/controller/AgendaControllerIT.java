@@ -1,12 +1,11 @@
 package com.salaboy.conferences.agenda.controller;
 
-import com.salaboy.conferences.agenda.AgendaItemCreator;
+import com.salaboy.conferences.agenda.util.AgendaItemCreator;
 import com.salaboy.conferences.agenda.AgendaServiceApplication;
 import com.salaboy.conferences.agenda.TestConfiguration;
 import com.salaboy.conferences.agenda.model.AgendaItem;
 import com.salaboy.conferences.agenda.repository.AgendaItemRepository;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.runner.RunWith;
@@ -21,8 +20,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.reactive.function.BodyInserters;
 
-import static com.salaboy.conferences.agenda.AgendaItemCreator.otherValidWithDefaultDay;
-import static com.salaboy.conferences.agenda.AgendaItemCreator.validWithDefaultDay;
+import static com.salaboy.conferences.agenda.util.AgendaItemCreator.otherValidWithDefaultDay;
+import static com.salaboy.conferences.agenda.util.AgendaItemCreator.validWithDefaultDay;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ContextConfiguration(classes = AgendaServiceApplication.class)
