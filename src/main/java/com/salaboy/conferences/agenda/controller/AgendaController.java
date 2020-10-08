@@ -1,19 +1,14 @@
 package com.salaboy.conferences.agenda.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.base.Strings;
 import com.salaboy.conferences.agenda.model.AgendaItem;
-import com.salaboy.conferences.agenda.model.Proposal;
 import com.salaboy.conferences.agenda.repository.AgendaItemRepository;
-import io.zeebe.client.api.response.ActivatedJob;
-import io.zeebe.client.api.worker.JobClient;
-import io.zeebe.spring.client.annotation.ZeebeWorker;
+import com.salaboy.conferences.agenda.service.AgendaItemService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -23,11 +18,17 @@ import java.util.stream.Collectors;
 public class AgendaController {
 
     private final AgendaItemRepository agendaItemRepository;
+    private final AgendaItemService agendaItemService;
     private final ObjectMapper objectMapper;
 
-    public AgendaController(AgendaItemRepository agendaItemRepository, ObjectMapper objectMapper) {
+    public AgendaController(
+            final AgendaItemRepository agendaItemRepository,
+            final ObjectMapper objectMapper,
+            final AgendaItemService agendaItemService) {
+
         this.agendaItemRepository = agendaItemRepository;
         this.objectMapper = objectMapper;
+        this.agendaItemService = agendaItemService;
     }
 
     @PostMapping
@@ -39,14 +40,7 @@ public class AgendaController {
             throw new IllegalStateException("Something went wrong with adding the Agenda Item: " + agendaItem);
         }
 
-        Mono<String> result = agendaItemRepository.save(agendaItem)
-                .doOnSuccess(i -> log.info("> Agenda Item Added to Agenda: {}", i))
-                .doOnError(i -> log.info("> Agenda Item NOT Added to Agenda: {}", i))
-                .map(i -> !Strings.isNullOrEmpty(i.getId()) ? "Agenda Item Added to Agenda" : "Agenda Item Not Added");
-
-        result.subscribe();
-
-        return result;
+        return agendaItemService.createAgenda(agendaItem);
     }
 
     @GetMapping
@@ -70,17 +64,5 @@ public class AgendaController {
 
         log.info(">>> Deleting all");
         return agendaItemRepository.deleteAll();
-    }
-
-    @ZeebeWorker(name = "agenda-worker", type = "agenda-publish")
-    public void newAgendaItemJob(final JobClient client, final ActivatedJob job) {
-        Proposal proposal = objectMapper.convertValue(job.getVariablesAsMap().get("proposal"), Proposal.class);
-        String[] days = {"Monday", "Tuesday"};
-        String[] times = {"9:00 am", "10:00 am", "11:00 am", "1:00 pm", "2:00 pm", "3:00 pm", "4:00 pm", "5:00 pm"};
-        Random random = new Random();
-        int day = random.nextInt(2);
-        int time = random.nextInt(8);
-        newAgendaItem(new AgendaItem(proposal.getTitle(), proposal.getAuthor(), days[day], times[time]));
-        client.newCompleteCommand(job.getKey()).send();
     }
 }
