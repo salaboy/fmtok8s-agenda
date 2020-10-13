@@ -30,7 +30,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @AutoConfigureWebTestClient
 @Import(TestConfiguration.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class AgendaControllerIT {
+public class AgendaControllerIntegrationTest {
 
     @Autowired
     private WebTestClient webTestClient;
