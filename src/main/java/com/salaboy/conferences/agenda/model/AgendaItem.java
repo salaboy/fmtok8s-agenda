@@ -1,24 +1,23 @@
 package com.salaboy.conferences.agenda.model;
 
-import java.util.Date;
-import java.util.Objects;
-import java.util.UUID;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Objects;
+
+@Document
 public class AgendaItem {
 
+    @Id
     private String id;
     private String title;
     private String author;
     private String day;
     private String time;
 
-
-    public AgendaItem() {
-        this.id = UUID.randomUUID().toString();
-    }
+    protected AgendaItem() {}
 
     public AgendaItem(String title, String author, String day, String time) {
-        this();
         this.title = title;
         this.author = author;
         this.day = day;
