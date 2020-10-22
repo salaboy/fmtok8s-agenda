@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+import java.util.regex.Pattern;
+
 @Service
 @Slf4j
 public class AgendaItemService {
@@ -18,7 +20,9 @@ public class AgendaItemService {
     }
 
     public Mono<String> createAgenda(AgendaItem agendaItem) {
-
+        if (Pattern.compile(Pattern.quote("fail"), Pattern.CASE_INSENSITIVE).matcher(agendaItem.getTitle()).find()) {
+            throw new IllegalStateException("Something went wrong with adding the Agenda Item: " + agendaItem);
+        }
         return agendaItemRepository.save(agendaItem)
                 .doOnSuccess(i -> log.info("> Agenda Item Added to Agenda: {}", i))
                 .doOnError(i -> log.info("> Agenda Item NOT Added to Agenda: {}", i))

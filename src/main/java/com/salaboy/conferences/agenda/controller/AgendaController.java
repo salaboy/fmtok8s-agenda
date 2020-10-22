@@ -36,10 +36,6 @@ public class AgendaController {
 
         log.info("> New Agenda Item Received: " + agendaItem);
 
-        if (agendaItem.getTitle().contains("fail")) {
-            throw new IllegalStateException("Something went wrong with adding the Agenda Item: " + agendaItem);
-        }
-
         return agendaItemService.createAgenda(agendaItem);
     }
 
