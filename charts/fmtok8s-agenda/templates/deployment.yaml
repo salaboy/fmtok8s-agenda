@@ -30,6 +30,7 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
+{{- if .Values.external.externalSecretsEnabled }}
           - name: VERSION
             value: {{ .Chart.Version }}
           - name: ZEEBE_CLIENT_BROKER_CONTACTPOINT
@@ -47,6 +48,7 @@ spec:
               secretKeyRef:
                 key: zeebe-client-secret
                 name: camunda-cloud-secret
+{{- end }}
           - name: ZEEBE_AUTHORIZATION_SERVER_URL
             value: https://login.cloud.camunda.io/oauth/token
           - name: ZEEBE_CLIENT_SECURITY_PLAINTEXT
