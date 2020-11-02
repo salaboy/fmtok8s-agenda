@@ -30,7 +30,7 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
-{{- if .Values.external.externalSecretsEnabled }}
+{{- if .Values.externalSecretsEnabled }}
           - name: VERSION
             value: {{ .Chart.Version }}
           - name: ZEEBE_CLIENT_BROKER_CONTACTPOINT
