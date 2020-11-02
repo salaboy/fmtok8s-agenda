@@ -30,9 +30,9 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
-{{- if .Values.externalSecretsEnabled }}
           - name: VERSION
             value: {{ .Chart.Version }}
+{{- if .Values.externalSecretsEnabled }}
           - name: ZEEBE_CLIENT_BROKER_CONTACTPOINT
             valueFrom:
               secretKeyRef:
@@ -79,8 +79,8 @@ spec:
         resources:
 {{ toYaml .Values.resources | indent 12 }}
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
-{{- end }}
       imagePullSecrets:
 {{- range $pval := .Values.jx.imagePullSecrets }}
       - name: {{ quote $pval }}
+{{- end }}
 {{- end }}
