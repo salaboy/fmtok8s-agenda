@@ -21,7 +21,7 @@ spec:
           env:
             - name: VERSION
               value: {{ .Chart.Version }}
- {{- if .Values.externalSecretForZeebe }}
+{{- if .Values.externalSecretForZeebe }}
           - name: ZEEBE_CLIENT_BROKER_CONTACTPOINT
             valueFrom:
               secretKeyRef:
