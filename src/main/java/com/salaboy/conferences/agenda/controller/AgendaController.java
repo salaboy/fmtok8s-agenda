@@ -37,21 +37,19 @@ public class AgendaController {
 
     private final AgendaItemRepository agendaItemRepository;
     private final AgendaItemService agendaItemService;
-    private final ObjectMapper objectMapper;
 
     public AgendaController(
             final AgendaItemRepository agendaItemRepository,
-            final ObjectMapper objectMapper,
             final AgendaItemService agendaItemService) {
 
         this.agendaItemRepository = agendaItemRepository;
-        this.objectMapper = objectMapper;
         this.agendaItemService = agendaItemService;
     }
 
     @PostMapping
     public Mono<String> newAgendaItem(@RequestBody AgendaItem agendaItem) {
-
+        log.info("> New Agenda Item Received: " + agendaItem);
+        log.info("\t eventsEnabled: " + eventsEnabled);
         if(eventsEnabled) {
             CloudEventBuilder cloudEventBuilder = CloudEventBuilder.v1()
                     .withId(UUID.randomUUID().toString())
@@ -64,7 +62,6 @@ public class AgendaController {
 
             CloudEvent cloudEvent = cloudEventBuilder.build();
 
-
             logCloudEvent(cloudEvent);
             WebClient webClient = WebClient.builder().baseUrl(K_SINK).filter(logRequest()).build();
 
@@ -72,11 +69,11 @@ public class AgendaController {
 
             postCloudEvent.bodyToMono(String.class)
                     .doOnError(t -> t.printStackTrace())
-                    .doOnSuccess(s -> System.out.println("Result -> " + s))
+                    .doOnSuccess(s -> log.info("Cloud Event Posted to K_SINK -> " + K_SINK + ": Result: " +  s))
                     .subscribe();
         }
 
-        log.info("> New Agenda Item Received: " + agendaItem);
+
 
         return agendaItemService.createAgenda(agendaItem);
     }
