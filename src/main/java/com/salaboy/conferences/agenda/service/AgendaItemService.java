@@ -1,5 +1,7 @@
 package com.salaboy.conferences.agenda.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Strings;
 import com.salaboy.cloudevents.helper.CloudEventsHelper;
 import com.salaboy.conferences.agenda.model.AgendaItem;
@@ -31,13 +33,15 @@ public class AgendaItemService {
     @Value("${K_SINK:http://broker-ingress.knative-eventing.svc.cluster.local/default/default}")
     private String K_SINK;
 
+    private ObjectMapper objectMapper = new ObjectMapper();
+
     private final AgendaItemRepository agendaItemRepository;
 
     public AgendaItemService(AgendaItemRepository agendaItemRepository) {
         this.agendaItemRepository = agendaItemRepository;
     }
 
-    public Mono<String> createAgenda(AgendaItem agendaItem) {
+    public Mono<String> createAgenda(AgendaItem agendaItem) throws JsonProcessingException {
 
 
         if (Pattern.compile(Pattern.quote("fail"), Pattern.CASE_INSENSITIVE).matcher(agendaItem.getTitle()).find()) {
@@ -46,12 +50,13 @@ public class AgendaItemService {
 
         log.info("\t eventsEnabled: " + eventsEnabled);
         if(eventsEnabled) {
+            String agendaItemString = objectMapper.writeValueAsString(agendaItem);
             CloudEventBuilder cloudEventBuilder = CloudEventBuilder.v1()
                     .withId(UUID.randomUUID().toString())
                     .withTime(OffsetDateTime.now().toZonedDateTime()) // bug-> https://github.com/cloudevents/sdk-java/issues/200
                     .withType("Agenda.ItemCreated")
                     .withSource(URI.create("agenda-service.default.svc.cluster.local"))
-                    .withData(agendaItem.toString().getBytes())
+                    .withData(agendaItemString.getBytes())
                     .withDataContentType("application/json")
                     .withSubject(agendaItem.getTitle());
 
