@@ -1,5 +1,6 @@
 package com.salaboy.conferences.agenda.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.salaboy.cloudevents.helper.CloudEventsHelper;
 import com.salaboy.conferences.agenda.model.AgendaItem;
@@ -41,7 +42,7 @@ public class AgendaController {
     }
 
     @PostMapping
-    public Mono<String> newAgendaItem(@RequestBody AgendaItem agendaItem) {
+    public Mono<String> newAgendaItem(@RequestBody AgendaItem agendaItem) throws JsonProcessingException {
         log.info("> New Agenda Item Received: " + agendaItem);
         return agendaItemService.createAgenda(agendaItem);
     }

@@ -1,5 +1,6 @@
 package com.salaboy.conferences.agenda.zeebe;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.salaboy.conferences.agenda.model.AgendaItem;
 import com.salaboy.conferences.agenda.model.Proposal;
@@ -28,7 +29,7 @@ public class ZeebeWorkers {
     }
 
     @ZeebeWorker(name = "agenda-worker", type = "agenda-publish")
-    public void newAgendaItemJob(final JobClient client, final ActivatedJob job) {
+    public void newAgendaItemJob(final JobClient client, final ActivatedJob job) throws JsonProcessingException {
 
         Proposal proposal = objectMapper.convertValue(job.getVariablesAsMap().get("proposal"), Proposal.class);
 
