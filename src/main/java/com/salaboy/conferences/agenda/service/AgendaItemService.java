@@ -53,7 +53,7 @@ public class AgendaItemService {
                     .withSource(URI.create("agenda-service.default.svc.cluster.local"))
                     .withData(agendaItem.toString().getBytes())
                     .withDataContentType("application/json")
-                    .withSubject(agendaItem.getId());
+                    .withSubject(agendaItem.getTitle());
 
             CloudEvent cloudEvent = cloudEventBuilder.build();
 
@@ -67,7 +67,7 @@ public class AgendaItemService {
                     .doOnSuccess(s -> log.info("Cloud Event Posted to K_SINK -> " + K_SINK + ": Result: " +  s))
                     .subscribe();
         }
-        
+
         return agendaItemRepository.save(agendaItem)
                 .doOnSuccess(i -> log.info("> Agenda Item Added to Agenda: {}", i))
                 .doOnError(i -> log.info("> Agenda Item NOT Added to Agenda: {}", i))
