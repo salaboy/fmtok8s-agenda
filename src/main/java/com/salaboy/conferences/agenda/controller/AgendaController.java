@@ -42,7 +42,7 @@ public class AgendaController {
     }
 
     @PostMapping
-    public Mono<String> newAgendaItem(@RequestBody AgendaItem agendaItem) throws JsonProcessingException {
+    public Mono<String> newAgendaItem(@RequestBody AgendaItem agendaItem) {
         log.info("> New Agenda Item Received: " + agendaItem);
         return agendaItemService.createAgenda(agendaItem);
     }

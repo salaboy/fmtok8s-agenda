@@ -29,7 +29,7 @@ public class ZeebeWorkers {
     }
 
     @ZeebeWorker(name = "agenda-worker", type = "agenda-publish")
-    public void newAgendaItemJob(final JobClient client, final ActivatedJob job) throws JsonProcessingException {
+    public void newAgendaItemJob(final JobClient client, final ActivatedJob job)  {
 
         Proposal proposal = objectMapper.convertValue(job.getVariablesAsMap().get("proposal"), Proposal.class);
 
