@@ -29,12 +29,6 @@ import java.util.stream.Collectors;
 @RequestMapping
 public class AgendaController {
 
-    @Value("${EVENTS_ENABLED:true}")
-    private Boolean eventsEnabled;
-
-    @Value("${K_SINK:http://broker-ingress.knative-eventing.svc.cluster.local/default/default}")
-    private String K_SINK;
-
     private final AgendaItemRepository agendaItemRepository;
     private final AgendaItemService agendaItemService;
 
@@ -49,32 +43,6 @@ public class AgendaController {
     @PostMapping
     public Mono<String> newAgendaItem(@RequestBody AgendaItem agendaItem) {
         log.info("> New Agenda Item Received: " + agendaItem);
-        log.info("\t eventsEnabled: " + eventsEnabled);
-        if(eventsEnabled) {
-            CloudEventBuilder cloudEventBuilder = CloudEventBuilder.v1()
-                    .withId(UUID.randomUUID().toString())
-                    .withTime(OffsetDateTime.now().toZonedDateTime()) // bug-> https://github.com/cloudevents/sdk-java/issues/200
-                    .withType("Agenda.ItemCreated")
-                    .withSource(URI.create("agenda-service.default.svc.cluster.local"))
-                    .withData(agendaItem.toString().getBytes())
-                    .withDataContentType("application/json")
-                    .withSubject(agendaItem.getId());
-
-            CloudEvent cloudEvent = cloudEventBuilder.build();
-
-            logCloudEvent(cloudEvent);
-            WebClient webClient = WebClient.builder().baseUrl(K_SINK).filter(logRequest()).build();
-
-            WebClient.ResponseSpec postCloudEvent = CloudEventsHelper.createPostCloudEvent(webClient, cloudEvent);
-
-            postCloudEvent.bodyToMono(String.class)
-                    .doOnError(t -> t.printStackTrace())
-                    .doOnSuccess(s -> log.info("Cloud Event Posted to K_SINK -> " + K_SINK + ": Result: " +  s))
-                    .subscribe();
-        }
-
-
-
         return agendaItemService.createAgenda(agendaItem);
     }
 
@@ -101,20 +69,4 @@ public class AgendaController {
         return agendaItemRepository.deleteAll();
     }
 
-    private void logCloudEvent(CloudEvent cloudEvent) {
-        EventFormat format = EventFormatProvider
-                .getInstance()
-                .resolveFormat(JsonFormat.CONTENT_TYPE);
-
-        log.info("Cloud Event: " + new String(format.serialize(cloudEvent)));
-
-    }
-
-    private static ExchangeFilterFunction logRequest() {
-        return ExchangeFilterFunction.ofRequestProcessor(clientRequest -> {
-            log.info("Request: " + clientRequest.method() + " - " + clientRequest.url());
-            clientRequest.headers().forEach((name, values) -> values.forEach(value -> log.info(name + "=" + value)));
-            return Mono.just(clientRequest);
-        });
-    }
 }
