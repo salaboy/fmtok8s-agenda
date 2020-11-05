@@ -55,7 +55,7 @@
         </dependency>
         <dependency>
             <groupId>com.github.salaboy</groupId>
-            <artifactId>spring-boot-starter-webflux-cloudevents</artifactId>
+            <artifactId>zeebe-cloud-events-java-sdk</artifactId>
             <version>master-SNAPSHOT</version>
         </dependency>
         <dependency>

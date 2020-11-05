@@ -11,6 +11,7 @@ import io.cloudevents.core.builder.CloudEventBuilder;
 import io.cloudevents.core.format.EventFormat;
 import io.cloudevents.core.provider.EventFormatProvider;
 import io.cloudevents.jackson.JsonFormat;
+import io.zeebe.cloudevents.ZeebeCloudEventsHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -60,12 +61,14 @@ public class AgendaItemService {
                     .withDataContentType("application/json")
                     .withSubject(agendaItem.getTitle());
 
-            CloudEvent cloudEvent = cloudEventBuilder.build();
+            CloudEvent zeebeCloudEvent = ZeebeCloudEventsHelper
+                    .buildZeebeCloudEvent(cloudEventBuilder)
+                    .withCorrelationKey(agendaItem.getProposalId()).build();
 
-            logCloudEvent(cloudEvent);
+            logCloudEvent(zeebeCloudEvent);
             WebClient webClient = WebClient.builder().baseUrl(K_SINK).filter(logRequest()).build();
 
-            WebClient.ResponseSpec postCloudEvent = CloudEventsHelper.createPostCloudEvent(webClient, cloudEvent);
+            WebClient.ResponseSpec postCloudEvent = CloudEventsHelper.createPostCloudEvent(webClient, zeebeCloudEvent);
 
             postCloudEvent.bodyToMono(String.class)
                     .doOnError(t -> t.printStackTrace())

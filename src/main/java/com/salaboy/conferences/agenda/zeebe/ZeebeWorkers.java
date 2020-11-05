@@ -36,7 +36,7 @@ public class ZeebeWorkers {
         var time = timeDayGenerator.time();
         var day = timeDayGenerator.day();
 
-        agendaItemService.createAgenda(new AgendaItem(proposal.getTitle(), proposal.getAuthor(), day, time))
+        agendaItemService.createAgenda(new AgendaItem(proposal.getId(),proposal.getTitle(), proposal.getAuthor(), day, time))
                 .subscribe(i -> {
                     client.newCompleteCommand(job.getKey()).send();
                 });

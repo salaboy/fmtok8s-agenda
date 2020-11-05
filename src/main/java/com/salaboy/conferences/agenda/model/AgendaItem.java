@@ -10,14 +10,17 @@ public class AgendaItem {
 
     @Id
     private String id;
+    private String proposalId;
     private String title;
     private String author;
     private String day;
     private String time;
 
+
     protected AgendaItem() {}
 
-    public AgendaItem(String title, String author, String day, String time) {
+    public AgendaItem(String proposalId, String title, String author, String day, String time) {
+        this.proposalId = proposalId;
         this.title = title;
         this.author = author;
         this.day = day;
@@ -65,10 +68,19 @@ public class AgendaItem {
         this.time = time;
     }
 
+    public String getProposalId() {
+        return proposalId;
+    }
+
+    public void setProposalId(String proposalId) {
+        this.proposalId = proposalId;
+    }
+
     @Override
     public String toString() {
         return "AgendaItem{" +
                 "id='" + id + '\'' +
+                ", proposalId='" + proposalId + '\'' +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", day='" + day + '\'' +
@@ -82,6 +94,7 @@ public class AgendaItem {
         if (o == null || getClass() != o.getClass()) return false;
         AgendaItem that = (AgendaItem) o;
         return Objects.equals(id, that.id) &&
+                Objects.equals(proposalId, that.proposalId) &&
                 Objects.equals(title, that.title) &&
                 Objects.equals(author, that.author) &&
                 Objects.equals(day, that.day) &&
@@ -90,6 +103,6 @@ public class AgendaItem {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, author, day, time);
+        return Objects.hash(id, proposalId, title, author, day, time);
     }
 }
