@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Strings;
 import com.salaboy.cloudevents.helper.CloudEventsHelper;
 import com.salaboy.conferences.agenda.model.AgendaItem;
+import com.salaboy.conferences.agenda.model.Proposal;
 import com.salaboy.conferences.agenda.repository.AgendaItemRepository;
 import io.cloudevents.CloudEvent;
 import io.cloudevents.core.builder.CloudEventBuilder;
@@ -21,6 +22,7 @@ import reactor.core.publisher.Mono;
 
 import java.net.URI;
 import java.time.OffsetDateTime;
+import java.util.Date;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
@@ -56,11 +58,13 @@ public class AgendaItemService {
                 .doOnSuccess(savedAgendaItem -> {
                     log.info("> Agenda Item Added to Agenda: {}", savedAgendaItem);
                     log.info("\t eventsEnabled: " + eventsEnabled);
+
                     if(eventsEnabled) {
-                        String agendaItemString = null;
+                        Proposal proposal = new Proposal(agendaItem.getProposalId(), agendaItem.getAuthor(), agendaItem.getTitle(), new Date());
+                        String proposalString = null;
                         try {
-                            agendaItemString = objectMapper.writeValueAsString(savedAgendaItem);
-                            agendaItemString = objectMapper.writeValueAsString(agendaItemString); //needs double quoted ??
+                            proposalString = objectMapper.writeValueAsString(proposal);
+                            proposalString = objectMapper.writeValueAsString(proposalString); //needs double quoted ??
                         } catch (JsonProcessingException e) {
                             e.printStackTrace();
                         }
@@ -69,13 +73,13 @@ public class AgendaItemService {
                                 .withTime(OffsetDateTime.now().toZonedDateTime()) // bug-> https://github.com/cloudevents/sdk-java/issues/200
                                 .withType("Agenda.ItemCreated")
                                 .withSource(URI.create("agenda-service.default.svc.cluster.local"))
-                                .withData(agendaItemString.getBytes())
+                                .withData(proposalString.getBytes())
                                 .withDataContentType("application/json")
                                 .withSubject(savedAgendaItem.getTitle());
 
                         CloudEvent zeebeCloudEvent = ZeebeCloudEventsHelper
                                 .buildZeebeCloudEvent(cloudEventBuilder)
-                                .withCorrelationKey(savedAgendaItem.getProposalId()).build();
+                                .withCorrelationKey(proposal.getId()).build();
 
                         logCloudEvent(zeebeCloudEvent);
                         WebClient webClient = WebClient.builder().baseUrl(K_SINK).filter(logRequest()).build();
