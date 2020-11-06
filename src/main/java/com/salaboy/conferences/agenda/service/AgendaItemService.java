@@ -60,6 +60,7 @@ public class AgendaItemService {
                         String agendaItemString = null;
                         try {
                             agendaItemString = objectMapper.writeValueAsString(savedAgendaItem);
+                            agendaItemString = objectMapper.writeValueAsString(agendaItemString); //needs double quoted ??
                         } catch (JsonProcessingException e) {
                             e.printStackTrace();
                         }
