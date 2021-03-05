@@ -19,7 +19,7 @@
 
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <zeebe.version>0.23.0</zeebe.version>
+        <zeebe.version>0.26.2</zeebe.version>
         <spring.cloud.contract>2.2.1.RELEASE</spring.cloud.contract>
         <springdoc-openapi-ui.version>1.2.32</springdoc-openapi-ui.version>
     </properties>
