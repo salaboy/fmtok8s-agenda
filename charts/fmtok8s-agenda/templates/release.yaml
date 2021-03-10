@@ -1,0 +1,48 @@
+{{- if .Capabilities.APIVersions.Has "jenkins.io/v1/Release" }}
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-03-10T10:45:07Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  commits:
+  - author:
+      email: jenkins-x@googlegroups.com
+      name: jenkins-x-bot
+    branch: master
+    committer:
+      email: jenkins-x@googlegroups.com
+      name: jenkins-x-bot
+    message: |
+      chore: release 0.0.73
+    sha: 945e56b790fc77d0c3a6faf8c8ea6e555c0f9f7c
+  - author:
+      email: jenkins-x@googlegroups.com
+      name: jenkins-x-bot
+    branch: master
+    committer:
+      email: jenkins-x@googlegroups.com
+      name: jenkins-x-bot
+    message: |
+      chore: add variables
+    sha: a85fa17f7495ec49a1fbc7a8ed25ce19055fa1dd
+  - author:
+      email: salaboy@gmail.com
+      name: salaboy
+    branch: master
+    committer:
+      email: salaboy@gmail.com
+      name: salaboy
+    message: |
+      updating release and charts for cm and secret
+    sha: 978572f32e4060b7273b9ce1be3d677bea3b07af
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda
+  gitOwner: salaboy
+  gitRepository: fmtok8s-agenda
+  name: '{{ .Chart.Name }}'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.74
+  version: v0.0.74
+status: {}
+ 
+{{- end }}
